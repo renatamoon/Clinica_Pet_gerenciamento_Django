@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load meus_filtros %}
+
 {% block title %}
 Cadastro de clientes
 {% endblock title %}
@@ -14,37 +16,38 @@ Cadastro de clientes
         {% csrf_token %}
         <div class="form-group">
         <label>NOME:</label>
-        {{form_cliente.nome}}
+        {{form_cliente.nome|addclass:'form-control'}}
         </div>
         <div class="form-group">
         <label>DATA DE NASCIMENTO:</label>
-        {{form_cliente.data_nascimento}}
+        {{form_cliente.data_nascimento|addclass:'form-control'}}
         </div>
         <div class="form-group">
         <label>E-MAIL:</label>
-        {{form_cliente.email}}
+        {{form_cliente.email|addclass:'form-control'}}
         </div>
         <div class="form-group">
         <label>CPF:</label>
-        {{form_cliente.cpf}}
+        {{form_cliente.cpf|addclass:'form-control'}}
         </div>
         <div class="form-group">
         <label>PROFISSÃO:</label>
-        {{form_cliente.profissao}}
+        {{form_cliente.profissao|addclass:'form-control'}}
         </div>
         <hr>
         <h4><b>ENDEREÇO</b></h4>
+        <br>
                 <div class="form-group">
         <label>RUA:</label>
-        {{form_endereco.rua}}
+        {{form_endereco.rua|addclass:'form-control'}}
         </div>
         <div class="form-group">
         <label>CIDADE:</label>
-        {{form_endereco.cidade}}
+        {{form_endereco.cidade|addclass:'form-control'}}
         </div>
         <div class="form-group">
         <label>ESTADO:</label>
-        {{form_endereco.estado}}
+        {{form_endereco.estado|addclass:'form-control'}}
         </div>
 
         <div class="form-group">
