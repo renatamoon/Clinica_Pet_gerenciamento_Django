@@ -19,10 +19,10 @@ Pets, Consultas dos Pets, Funcionários e Usuários a fim de permitir o acesso a
 
 Algumas funcionalidades:
 
-    *CRUDE de Clientes;
-    *CRUDE de Funcionarios;
-    *CRUDE de Usuários;
-    *CRUDE de Pets e Consultas;
+    *CRUD de Clientes;
+    *CRUD de Funcionarios;
+    *CRUD de Usuários;
+    *CRUD de Pets e Consultas;
     *Print da página do extrato da consulta;
     *Envio por e-mail dos dados da consulta;
 
