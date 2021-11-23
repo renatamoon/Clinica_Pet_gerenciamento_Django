@@ -30,7 +30,7 @@ Algumas funcionalidades:
 
 <hr>
   
-  ## <a id="tecnologias"> 🧪 TECNOLOGIAS UTILIZADAS PARA ESTE PROJETO </a>
+  ## <a id="tecnologias"> 🧪 TECNOLOGIAS UTILIZADAS NESTE PROJETO </a>
 
 Front-End:
 
@@ -42,7 +42,6 @@ Desenvolvimento da parte de Administração:
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Bower version](https://img.shields.io/bower/v/adminlte.svg)
 
 Banco de Dados:
