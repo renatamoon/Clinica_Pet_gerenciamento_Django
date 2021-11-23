@@ -1,5 +1,5 @@
 # Clinica_Pet_gerenciamento_Django
-<i>istema de Gestão de Clinicas PET</i>
+<i>sistema de Gestão de Clínica PET</i>
 
 Topics
 python django django-application django-framework django-project
