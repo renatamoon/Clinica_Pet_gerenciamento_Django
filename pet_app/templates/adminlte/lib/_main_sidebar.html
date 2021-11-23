@@ -1,0 +1,38 @@
+
+{% extends 'adminlte/lib/_main_sidebar.html' %}
+
+{% block logo_text %}     
+<span class="brand-text font-weight-bold">CLINICA PET</span>
+{% endblock logo_text %}
+
+{% block nav_heading %}
+Links de Navegação
+{% endblock nav_heading %}
+
+{% block nav_links %}
+<li class="nav-item">
+    <a href="{% url 'listar_cliente' %}" class="nav-link">
+        <i class="nav-icon fas fa-cog"></i> 
+        <p>LISTAR CLIENTES</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i> 
+        <p>USUÁRIOS</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-calendar"></i> 
+        <p>PETS</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-calendar"></i> 
+        <p>FUNCIONÁRIOS</p>
+    </a>
+</li>
+
+{% endblock nav_links %}

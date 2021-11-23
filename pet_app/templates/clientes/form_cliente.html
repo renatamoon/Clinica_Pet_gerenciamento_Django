@@ -15,37 +15,45 @@ Cadastro de clientes
     <form method="POST">
         {% csrf_token %}
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>NOME:</label>
         {{form_cliente.nome|addclass:'form-control'}}
         </div>
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>DATA DE NASCIMENTO:</label>
         {{form_cliente.data_nascimento|addclass:'form-control'}}
         </div>
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>E-MAIL:</label>
         {{form_cliente.email|addclass:'form-control'}}
         </div>
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>CPF:</label>
         {{form_cliente.cpf|addclass:'form-control'}}
         </div>
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>PROFISSÃO:</label>
         {{form_cliente.profissao|addclass:'form-control'}}
         </div>
         <hr>
         <h4><b>ENDEREÇO</b></h4>
         <br>
-                <div class="form-group">
+        <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>RUA:</label>
         {{form_endereco.rua|addclass:'form-control'}}
         </div>
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>CIDADE:</label>
         {{form_endereco.cidade|addclass:'form-control'}}
         </div>
         <div class="form-group">
+        {{ form_cliente.nome.errors }}
         <label>ESTADO:</label>
         {{form_endereco.estado|addclass:'form-control'}}
         </div>

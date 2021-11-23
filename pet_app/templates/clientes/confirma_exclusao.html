@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+{% block title %}
+EXCLUSÃO DE CLIENTES
+{% endblock title %}
+
+{% block content %}
+<div class="card card-primary"> 
+    <div class="card-header">
+        <div class="card-title"><b>TEM CERTEZA QUE DESEJA REMOVER O CLIENTE A SEGUIR?</b></div>        
+    </div>    
+    <br>
+    <form method="POST">
+        <br>
+        {% csrf_token %}
+        {% bootstrap_form form_servico %}
+        <td>
+        <button class="btn btn-danger" type="submit"> EXCLUIR</button>  </td>        
+        <td>
+        <a href="{% url 'listar_clientes' %}" class="btn btn-info">VOLTAR</a></td>             
+    </form>     
+</div>
+{% endblock content %}
