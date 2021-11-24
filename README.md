@@ -1,9 +1,6 @@
 # Clinica_Pet_gerenciamento_Django
 <i>sistema de Gestão de Clínica PET</i>
 
-Topics
-python django django-application django-framework django-project
-
 <p align="center">
   <a href="#projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias">Tecnologias utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
