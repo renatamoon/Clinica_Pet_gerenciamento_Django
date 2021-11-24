@@ -32,7 +32,7 @@ LISTA DE CLIENTES
                             <td>
                                 <a href="#">Editar</a>
                                 <a href="#">|</a>
-                                <a href="#">Remover</a>
+                                <a href="{% url 'remover_cliente' cliente.id %}">Remover</a>
                             </td>
                         </tr>
                     {% endfor %}

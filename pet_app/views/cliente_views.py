@@ -54,14 +54,14 @@ def cadastrar_cliente(request):
 #     return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente})
 
 
-# def remover_cliente_db(cliente):
-#     cliente.delete()
+def remover_cliente_db(cliente):
+    cliente.delete()
 
 
-# def remover_cliente(request, id):
-#     cliente = Cliente.objects.get(id=id)
-#     form_cliente = ClienteForm(request.POST or None, instance=cliente)
-#     if request.method == 'POST':
-#         remover_cliente_db(cliente)
-#         return redirect('listar_clientes')
-#     return render(request, 'clientes/confirma_exclusao.html', {'form_cliente': form_cliente})
+def remover_cliente(request, id):
+    cliente = Cliente.objects.get(id=id)
+    form_cliente = ClienteForm(request.POST or None, instance=cliente)
+    if request.method == 'POST':
+        remover_cliente_db(cliente)
+        return redirect('listar_cliente')
+    return render(request, 'clientes/confirma_exclusao.html', {'form_cliente': form_cliente})
