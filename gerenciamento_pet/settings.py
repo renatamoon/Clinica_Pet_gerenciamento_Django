@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',    
     'pet_app',
-    'django_adminlte',    
+    'django_adminlte',  
+    'bootstrap4',  
 ]
 
 MIDDLEWARE = [
@@ -75,16 +76,24 @@ WSGI_APPLICATION = 'gerenciamento_pet.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '0.0.0.0',
-        'PORT': '3306',
-        'NAME': 'gerenciamento_pet_final',
-        'USER': 'root',
-        'PASSWORD': 'my-secret-pw',        
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': '0.0.0.0',
+#         'PORT': '3306',
+#         'NAME': 'gerenciamento_pet_final',
+#         'USER': 'root',
+#         'PASSWORD': 'my-secret-pw',        
+#     }
+# }
 
 # DATABASES = {
 #     'default': {

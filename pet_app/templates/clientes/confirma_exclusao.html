@@ -5,19 +5,50 @@ EXCLUSÃO DE CLIENTES
 {% endblock title %}
 
 {% block content %}
-<div class="card card-primary"> 
-    <div class="card-header">
-        <div class="card-title"><b>TEM CERTEZA QUE DESEJA REMOVER O CLIENTE A SEGUIR?</b></div>        
+
+<style>   
+	
+	.center-column{        
+        text-align: left;
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;		
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+    .box box-solid box-danger{
+        margin-bottom: 10px;        
+    }
+
+</style>
+
+<div class="center-column">
+<div class="box box-solid box-danger"> 
+    <div class="box-header with-border">
+        <div class="card-title" style="font-size:20px">
+            <b>TEM CERTEZA QUE DESEJA REMOVER O CLIENTE A SEGUIR?</b>
+        </div>        
     </div>    
     <br>
-    <form method="POST">
+    <div class="box-body" style="font-size:18px">
+        <p><b>NOME: </b>{{cliente.nome}}</p>
+        <p><b>PROFISSÃO: </b>{{cliente.profissao}}</p>
+        <p><b>DATA DE NASCIMENTO: </b>{{cliente.data_nascimento}}</p>
+        <p><b>E-MAIL:</b> {{cliente.email}}</p>
+        <p><b>CPF: </b>{{cliente.cpf}}</p>
+    </div>
+    <form method="POST">        
         <br>
-        {% csrf_token %}
-        
+        {% csrf_token %} 
         <td>
         <button class="btn btn-danger" type="submit"> EXCLUIR</button>  </td>        
         <td>
-        <a href="{% url 'listar_cliente' %}" class="btn btn-info">VOLTAR</a></td>             
+        <a href="{% url 'listar_clientes' %}" class="btn btn-info">VOLTAR</a></td> 
+        </div>            
     </form>     
 </div>
+</div>
+
 {% endblock content %}

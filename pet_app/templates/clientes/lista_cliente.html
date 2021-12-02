@@ -13,22 +13,23 @@ DADOS DO CLIENTE
           <div class="box box-primary">
             <div class="box-body box-profile">
               <h3 class="profile-username text-center">{{ cliente.nome }}</h3>
-
               <p class="text-muted text-center">{{ cliente.profissao }}</p>
-
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Nascimento</b> <a class="pull-right">{{ cliente.data_nascimento }}</a>
+                  <b>Nascimento</b> <a class="pull-right">{{ cliente.data_nascimento|date:"d/m/Y" }}</a>
                 </li>
                 <li class="list-group-item">
                   <b>CPF</b> <a class="pull-right">{{ cliente.cpf }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>E-MAIL</b> <a class="pull-right">{{ cliente.email }}</a>
-                </li>
-                <li class="list-group-item">
                   <b>RESIDÊNCIA</b> <a class="pull-right">{{ cliente.endereco.cidade }} | {{cliente.endereco.estado}}</a>
                 </li>
+                <li class="list-group-item" style="height: 60px;">
+                  <b>E-MAIL</b> <a class="pull-right">{{ cliente.email }}</a>
+                </li>
+                <li class="list-group-item" style="height: 60px;">
+                  <b>CLIENTE CADASTRADO EM</b> <a class="pull-right">{{ cliente.created_on}}</a>
+                </li>                
               </ul>
             </div>
             <!-- /.box-body -->
@@ -40,23 +41,18 @@ DADOS DO CLIENTE
               <h3 class="box-title">Pets</h3>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
-            
+            <div class="box-body">            
               <a href="#">
                 <strong><i class="fa fa-paw margin-r-5"></i> </strong>
               </a>
-
-              <p class="text-muted">
-                
+              <p class="text-muted">                
               </p>
-              <hr>
-            
+              <hr>            
               <div class="row">
                 <div class="col-md-12">
                   <a href="#" class="btn btn-primary btn-block">Cadastrar Pet</a>
                 </div>
               </div>
-
             </div>
             <!-- /.box-body -->
           </div>
@@ -72,23 +68,20 @@ DADOS DO CLIENTE
                     <div class="active tab-pane" id="timeline">
                         <ul class="timeline timeline-inverse">
                             <li class="time-label">
-                        <span class="bg-red">
-                         
-                        </span>
-                            </li>
-
-                          
+                        <span class="bg-red">                         
+                       <li class="list-group-item">
+                  <b>E-MAIL</b> <a class="pull-right">{{ cliente.email }}</a>
+                </li> </span>
+                            </li>                          
                             <li>
                                 <i class="fa fa-paw bg-blue"></i>
                                 <div class="timeline-item">
-                                    <span class="time"> <i class="fa fa-calendar"></i>
-                                        
+                                    <span class="time"> <i class="fa fa-calendar"></i>                                        
                                     </span>
                                     <h3 class="timeline-header">
                                         Pet realizou nova consulta
                                     </h3>
-                                    <div class="timeline-body">
-                                     
+                                    <div class="timeline-body">                                     
                                     </div>
                                     <div class="timeline-footer">
                                       <a class="btn btn-primary btn-xs" href="#">

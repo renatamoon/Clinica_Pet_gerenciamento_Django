@@ -5,20 +5,16 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">{% block logo_text_small %}<b>A</b>LTE{% endblock %}</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">{% block logo_text %}<b>CLINICA</b>PET{% endblock %}</span>
+        <span class="logo-lg">{% block logo_text %}<b>CLINICA </b>PET{% endblock %}</span>
     </a>
     {% endblock %}
-
 
 {% block nav_bar %}
 
 <ul class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-    </li>
-    <li class="nav-item d-none d-sm-inline-block">
-        <a href="{% url 'listar_cliente' %}" class="nav-link">Home</a>
-    </li>    
+        <a href="{% url 'listar_clientes' %}" class="nav-link">
+            <button class="btn btn-info" style="padding: 10px 20px; margin-top: 5px; margin-left: 0px;"><b>HOME</b></button>
+        </a>
 </ul>
 
 {% endblock nav_bar %}
