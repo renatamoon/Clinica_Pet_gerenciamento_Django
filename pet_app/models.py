@@ -50,7 +50,7 @@ class Pet(models.Model):
     )
 
     nome = models.CharField(max_length=50, null=False, blank=False)
-    idade = models.IntegerField(max_length=10, blank=True, null=True)
+    idade = models.IntegerField(blank=False, null=False)
     peso = models.BooleanField(default=False)
     categoria = models.CharField(max_length=2, choices=CATEGORIA_PET_CHOICES, blank=True, null=True)
     cor = models.CharField(max_length=2, choices=COR_PET_CHOICES, blank=True, null=True)

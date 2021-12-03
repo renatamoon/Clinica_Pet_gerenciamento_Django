@@ -18,4 +18,7 @@ def inserir_pet(request, id):
             pet_novo = pet.Pet(proprietario=proprietario, nome=nome, idade=idade, categoria=categoria, cor=cor, peso=peso, raca=raca, genero=genero)
             pet_service.cadastrar_pet(pet_novo)
             return redirect('listar_clientes')
+    else:
+        form_pet = pet_forms.PetForm()
+    return render(request, 'pets/form_pet.html', {'form_pet': form_pet})
             
