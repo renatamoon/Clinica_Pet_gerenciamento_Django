@@ -95,4 +95,8 @@ DATABASES = {
 *USANDO O ADMINLTE3 - Bootstrap Admin Dashboard Template<br>
 <br>
 https://adminlte.io/<br>  
+
+*VALIDADOR DE CPF - Essa é uma implementação simples e enxuta de validadores para CPF de usuários.
+https://github.com/gabrielloliveira/django-cpf<br>
+<br>
 <hr>

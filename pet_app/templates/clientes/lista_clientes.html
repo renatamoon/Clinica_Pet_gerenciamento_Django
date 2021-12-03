@@ -24,15 +24,15 @@ LISTA DE CLIENTES
                 <tbody>
                     {% for cliente in clientes %}
                         <tr>                            
-                            <td><a href="{% url 'listar_cliente' cliente.id %}">{{ cliente.nome }}</a></td>
+                            <td><a href="{% url 'listar_cliente' cliente.id %}">{{ cliente.nome|title }}</a></td>
                             <td>{{ cliente.data_nascimento }}</td>
-                            <td>{{ cliente.profissao }}</td>
+                            <td>{{ cliente.profissao|title }}</td>
                             <td>{{ cliente.cpf }}</td>
 
                             <td>
-                                <a href="{% url 'editar_cliente' cliente.id %}"><b>Editar</b></a>
+                                <a href="{% url 'editar_cliente' cliente.id %}">Editar</a>
                                 <a href="#">|</a>
-                                <a href="{% url 'remover_cliente' cliente.id %}" style="color: red;"><b>Remover</b></a>
+                                <a href="{% url 'remover_cliente' cliente.id %}" style="color: red;">Remover</a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -43,5 +43,4 @@ LISTA DE CLIENTES
         <br>        
     </div>
 </div>
-
 {% endblock content %}

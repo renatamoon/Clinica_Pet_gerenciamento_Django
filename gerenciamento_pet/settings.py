@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',    
     'pet_app',
-    'django_adminlte',  
-    'bootstrap4',  
+    'django_adminlte',      
 ]
 
 MIDDLEWARE = [

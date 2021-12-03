@@ -17,4 +17,4 @@ def editar_endereco(endereco_antigo, endereco_novo):
 
 
 def remover_endereco(endereco):
-    endereco.delete() 
+    endereco.delete()

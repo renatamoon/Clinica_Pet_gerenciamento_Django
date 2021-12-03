@@ -45,23 +45,12 @@ def cadastrar_cliente(request):
     return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente, 'form_endereco': form_endereco})
 
 
-def editar_cliente(request, id):
-    cliente = Cliente.objects.get(id=id)
-    form_cliente = ClienteForm(request.POST or None, instance=cliente)
-    if form_cliente.is_valid():
-        form_cliente.save()
-        return redirect('lista_clientes')
-    return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente})
-
-
-def remover_cliente_db(cliente):
-    cliente.delete()
-
-
 def remover_cliente(request, id):
     cliente = cliente_service.listar_cliente_id(id)
+    endereco = endereco_service.listar_endereco_id(cliente.endereco.id)
     if request.method == "POST":
-        remover_cliente_db(cliente)
+        cliente_service.remover_cliente(cliente)
+        endereco_service.remover_endereco(endereco)
         return redirect('listar_clientes')
     return render(request, 'clientes/confirma_exclusao.html', {'cliente': cliente})
 
@@ -84,7 +73,7 @@ def editar_cliente(request, id):
                         endereco_novo = endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
                         endereco_editado = endereco_service.editar_endereco(endereco_editar, endereco_novo)
                         cliente_novo = cliente.Cliente(nome=nome, email=email, data_nascimento=data_nascimento,
-                                                profissao=profissao, cpf=cpf, endereco=endereco_novo)
+                                                profissao=profissao, cpf=cpf, endereco=endereco_editado)
                         cliente_service.editar_cliente(cliente_editar, cliente_novo)
                         return redirect('listar_clientes')
     return render(request, 'clientes/form_cliente.html', {'form_cliente':form_cliente, 'form_endereco': form_endereco})

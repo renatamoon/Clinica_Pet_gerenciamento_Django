@@ -21,3 +21,9 @@ def editar_cliente(cliente, cliente_novo):
     cliente.profissao = cliente_novo.profissao
     cliente.save(force_update=True)
 
+
+def remover_cliente(cliente):
+    cliente.delete()
+
+
+
