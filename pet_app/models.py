@@ -25,3 +25,35 @@ class Cliente(TimeStampedModel):
     data_nascimento = models.DateField(null=False, blank=False)
     profissao = models.CharField(max_length=25, null= False, blank=False)
 
+
+class Pet(models.Model):
+    CATEGORIA_PET_CHOICES = (
+        ('Ca', 'Cachorro'),
+        ('Ga', 'Gato'),
+        ('Pa', 'Pássaro'),
+        ('Ha', 'Hamister'),
+    )
+
+    COR_PET_CHOICES = (
+        ('Pr', 'Preto'),
+        ('Br', 'Branco'),
+        ('Ci', 'Cinza'),
+        ('Ma', 'Malhado'),
+        ('Cr', 'Creme'),
+        ('Mr', 'Marrom'),
+        ('Am', 'Amarelo'),
+    )
+
+    GENERO_PET_CHOICES = (
+        ('Fe', 'Femea'),
+        ('Ma', 'Macho'),
+    )
+
+    nome = models.CharField(max_length=50, null=False, blank=False)
+    idade = models.IntegerField(max_length=10, blank=True, null=True)
+    peso = models.BooleanField(default=False)
+    categoria = models.CharField(max_length=2, choices=CATEGORIA_PET_CHOICES, blank=True, null=True)
+    cor = models.CharField(max_length=2, choices=COR_PET_CHOICES, blank=True, null=True)
+    raca = models.TextField(max_length=50, blank=True, null=True)
+    genero = models.CharField(max_length=2, choices=GENERO_PET_CHOICES, blank=True, null=True)
+    proprietario = models.ForeignKey(Cliente, on_delete=models.CASCADE, blank=False, null=False)

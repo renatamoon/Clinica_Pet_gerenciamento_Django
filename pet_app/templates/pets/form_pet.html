@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load meus_filtros %}
+
+{% block title %}
+CADASTRO DE PETS
+{% endblock title %}
+
+{% block content %}
+<div class="box box-solid box-primary">
+    <div class="box-header with-border">
+        <div class="card-title"><h3>            
+                <b>CADASTRO DE PETS</b>            
+        </div>
+    </div>
+    <div class="box-body">
+    <form method="POST">
+        {% csrf_token %}       
+        <h3><b>DADOS DO PET</b></h3>
+        <br>
+        <div class="form-group">       
+        <label>NOME DO PET:</label>
+        </div>
+        <div class="form-group">
+        
+        <label>IDADE:</label>
+        
+        </div>
+        <div class="form-group">
+        
+        <label>CATEGORIA:</label>
+        
+        </div>
+        <div class="form-group">
+        
+        <label>COR:</label>
+        
+        </div>
+        <div class="form-group">
+       
+        <label>PESO:</label>
+        
+        </div>
+        <hr>
+        <h3><b>RAÇA</b></h3>
+        <br>        
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="SALVAR CADASTRO">
+        </div>
+        <div class="form-group">
+            <a href="#" class="btn btn-warning">VOLTAR</a></td> 
+        </div>
+    </form>
+    </div>
+</div>
+{% endblock content %}
