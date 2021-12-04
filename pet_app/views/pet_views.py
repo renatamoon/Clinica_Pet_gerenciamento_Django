@@ -16,9 +16,29 @@ def inserir_pet(request, id):
             raca = form_pet.cleaned_data["raca"]
             genero = form_pet.cleaned_data["genero"]
             pet_novo = pet.Pet(proprietario=proprietario, nome=nome, idade=idade, categoria=categoria, cor=cor, peso=peso, raca=raca, genero=genero)
-            pet_service.cadastrar_pet(pet_novo)
+            pet_service.cadastrar_pet(pet_novo) #cadastrar no banco de dados
             return redirect('listar_clientes')
     else:
         form_pet = pet_forms.PetForm()
     return render(request, 'pets/form_pet.html', {'form_pet': form_pet})
-            
+
+
+def listar_pet_id(request, id):
+    pet = pet_service.listar_pet_id(id)
+    return render(request, 'pets/lista_pet.html', {'pet': pet})
+
+
+def editar_pet(request, id):
+    pet_antigo = pet_service.listar_pet_id(id)
+    form_pet = pet_forms.PetForm(request.POST or None, instance=pet_antigo)
+    if form_pet.is_valid():
+        proprietario = form_pet.cleaned_data["proprietario"]
+        nome = form_pet.cleaned_data["nome"]
+        idade = form_pet.cleaned_data["idade"]
+        categoria = form_pet.cleaned_data["categoria"]
+        cor = form_pet.cleaned_data["cor"]        
+        pet_novo = pet.Pet(proprietario=proprietario, nome=nome, idade=idade, cor=cor, categoria=categoria)
+        pet_service.editar_pet(pet_antigo, pet_novo)
+        return redirect('listar_pets')
+    return render(request, 'pets/form_pet.html', {'form_pet': form_pet})
+

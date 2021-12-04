@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% load meus_filtros %}
-
 {% block title %}
 CADASTRO DE PETS
 {% endblock title %}
@@ -10,7 +8,7 @@ CADASTRO DE PETS
 <div class="box box-solid box-primary">
     <div class="box-header with-border">
         <div class="card-title"><h3>            
-                <b>CADASTRO DE PETS</b>            
+            <b>CADASTRO DE CLIENTES</b>            
         </div>
     </div>
     <div class="box-body">
@@ -18,35 +16,51 @@ CADASTRO DE PETS
         {% csrf_token %}       
         <h3><b>DADOS DO PET</b></h3>
         <br>
-        <div class="form-group">       
+
+        <div class="form-group">
+        {{ form_pet.nome.errors }}
         <label>NOME DO PET:</label>
+        {{form_pet.nome|addclass:'form-control' }}
         </div>
+
         <div class="form-group">
-        
+        {{ form_pet.idade.errors }}
         <label>IDADE:</label>
-        
+        {{form_pet.idade|addclass:'form-control' }}
         </div>
+
         <div class="form-group">
-        
-        <label>CATEGORIA:</label>
-        
+        {{ form_pet.genero.errors }}
+        <label>GENERO:</label>
+        {{form_pet.genero|addclass:'form-control' }}
         </div>
+
         <div class="form-group">
-        
+        {{ form_pet.categoria.errors }}
+        <label>CARTEGORIA:</label>
+        {{form_pet.categoria|addclass:'form-control' }}
+        </div>
+
+        <div class="form-group">
+        {{ form_pet.cor.errors }}
         <label>COR:</label>
-        
-        </div>
+        {{form_pet.cor|addclass:'form-control' }}
+        </div>        
+
         <div class="form-group">
-       
+        {{ form_pet.raca.errors }}
+        <label>RAÇA:</label>
+        {{form_pet.raca|addclass:'form-control' }}
+        </div>
+        
+        <div class="form-group">
+        {{ form_pet.peso.errors }}
         <label>PESO:</label>
-        
+        {{form_pet.peso|addclass:'form-control' }}
         </div>
-        <hr>
-        <h3><b>RAÇA</b></h3>
-        <br>        
-        </div>
+
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="SALVAR CADASTRO">
+            <input type="submit" class="btn btn-primary" value="SALVAR">
         </div>
         <div class="form-group">
             <a href="#" class="btn btn-warning">VOLTAR</a></td> 

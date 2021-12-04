@@ -2,7 +2,7 @@ from ..models import Cliente
 
 def cadastrar_cliente(cliente):    
     Cliente.objects.create(nome=cliente.nome, email=cliente.email, endereco=cliente.endereco, cpf=cliente.cpf,
-                           data_nascimento= cliente.data_nascimento, profissao = cliente.profissao)
+                           data_nascimento=cliente.data_nascimento, profissao=cliente.profissao)
 
 
 def listar_clientes():
@@ -11,6 +11,7 @@ def listar_clientes():
 
 def listar_cliente_id(id):
     return Cliente.objects.get(id=id)
+    
 
 def editar_cliente(cliente, cliente_novo):
     cliente.nome = cliente_novo.nome

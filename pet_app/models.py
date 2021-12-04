@@ -51,9 +51,9 @@ class Pet(models.Model):
 
     nome = models.CharField(max_length=50, null=False, blank=False)
     idade = models.IntegerField(blank=False, null=False)
-    peso = models.BooleanField(default=False)
+    peso = models.CharField(max_length=50, null=False, blank=False)
     categoria = models.CharField(max_length=2, choices=CATEGORIA_PET_CHOICES, blank=True, null=True)
     cor = models.CharField(max_length=2, choices=COR_PET_CHOICES, blank=True, null=True)
-    raca = models.TextField(max_length=50, blank=True, null=True)
+    raca = models.CharField(max_length=20, blank=True, null=True)
     genero = models.CharField(max_length=2, choices=GENERO_PET_CHOICES, blank=True, null=True)
     proprietario = models.ForeignKey(Cliente, on_delete=models.CASCADE, blank=False, null=False)

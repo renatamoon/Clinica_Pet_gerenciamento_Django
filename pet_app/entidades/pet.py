@@ -1,4 +1,4 @@
-class Endereco():
+class Pet():
     def __init__(self, nome, idade, peso, categoria, cor, raca, genero, proprietario):
         self.__nome = nome
         self.__idade = idade
@@ -63,7 +63,7 @@ class Endereco():
         return self.__genero
 
     @genero.setter
-    def racgeneroa(self, genero):
+    def genero(self, genero):
         self.__genero = genero
 
     @property

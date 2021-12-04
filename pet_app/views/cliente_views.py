@@ -1,11 +1,8 @@
 from django.shortcuts import redirect, render
-
-from pet_app.models import Cliente
-
 from ..forms.cliente_forms import ClienteForm
 from ..forms.endereco_forms import EnderecoClienteForm
 from ..entidades import cliente, endereco
-from ..services import cliente_service, endereco_service
+from ..services import cliente_service, endereco_service, pet_service
 
 
 def listar_clientes(request):
@@ -15,8 +12,8 @@ def listar_clientes(request):
 
 def listar_cliente_id(request, id):
     cliente = cliente_service.listar_cliente_id(id)
-    return render(request, 'clientes/lista_cliente.html', {'cliente': cliente})
-
+    pets = pet_service.listar_pets(id)
+    return render(request, 'clientes/lista_cliente.html', {'cliente': cliente, 'pets': pets})
 
 
 def cadastrar_cliente(request):
@@ -73,7 +70,7 @@ def editar_cliente(request, id):
                         endereco_novo = endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
                         endereco_editado = endereco_service.editar_endereco(endereco_editar, endereco_novo)
                         cliente_novo = cliente.Cliente(nome=nome, email=email, data_nascimento=data_nascimento,
-                                                profissao=profissao, cpf=cpf, endereco=endereco_editado)
+                        profissao=profissao, cpf=cpf, endereco=endereco_editado)
                         cliente_service.editar_cliente(cliente_editar, cliente_novo)
                         return redirect('listar_clientes')
     return render(request, 'clientes/form_cliente.html', {'form_cliente':form_cliente, 'form_endereco': form_endereco})
