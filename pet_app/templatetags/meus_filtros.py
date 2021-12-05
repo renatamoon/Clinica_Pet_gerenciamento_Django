@@ -6,4 +6,9 @@ register = template.Library()
 
 @register.filter(name='addclass')
 def addclass(value, arg):
-    return value.as_widget(attrs={'class': arg})
+    return value.as_widget(attrs={'class': arg})    
+
+
+@register.filter(name='kilos')
+def add(value, arg):
+    return value.add(arg, 'kilos')

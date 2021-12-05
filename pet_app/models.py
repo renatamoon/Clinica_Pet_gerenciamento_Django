@@ -26,7 +26,7 @@ class Cliente(TimeStampedModel):
     profissao = models.CharField(max_length=25, null= False, blank=False)
 
 
-class Pet(models.Model):
+class Pet(TimeStampedModel):
     CATEGORIA_PET_CHOICES = (
         ('Ca', 'Cachorro'),
         ('Ga', 'Gato'),

@@ -12,23 +12,23 @@ DADOS DO CLIENTE
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <h3 class="profile-username text-center"><b>{{ cliente.nome|title }}</b></h3>
-              <p class="text-muted text-center">{{ cliente.profissao }}</p>
+              <h3 class="profile-username text-center"><b>{{ cliente.nome|upper }}</b></h3>
+              <p class="text-muted text-center"><b>Profissão:</b> {{ cliente.profissao }}</p>
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Nascimento</b> <a class="pull-right">{{ cliente.data_nascimento|date:"d/m/Y" }}</a>
+                  <b>Data de nascimento</b> <a class="pull-right">{{ cliente.data_nascimento|date:"d/m/Y" }}</a>
                 </li>
                 <li class="list-group-item">
                   <b>CPF</b> <a class="pull-right">{{ cliente.cpf }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>RESIDÊNCIA</b> <a class="pull-right">{{ cliente.endereco.cidade }} | {{cliente.endereco.estado}}</a>
+                  <b>Endereço</b> <a class="pull-right">{{ cliente.endereco.cidade }} | {{cliente.endereco.estado}}</a>
                 </li>
-                <li class="list-group-item" style="height: 60px;">
-                  <b>E-MAIL</b> <a class="pull-right">{{ cliente.email }}</a>
+                <li class="list-group-item">
+                  <b>E-mail</b> <a class="pull-right">{{ cliente.email }}</a>
                 </li>
-                <li class="list-group-item" style="height: 60px;">
-                  <b>CADASTRADO EM:</b> <a class="pull-right">{{cliente.created_on}}</a>
+                <li class="list-group-item">
+                  <b>Cadastrado em</b> <a class="pull-right">{{cliente.created_on}}</a>
                 </li>                
               </ul>
             </div>
@@ -37,23 +37,26 @@ DADOS DO CLIENTE
           <!-- /.box -->
           <!-- About Me Box -->
           <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title"><b>Pets</b></h3>
+            <div class="box-header with-border text-center">
+              <h3 class="box-title"><b>Pets Cadastrados</b></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               {% for pet in pets %}            
-              <a href="#">
-                <strong><i class="fa fa-paw margin-r-5"></i>{{pet.nome}}</strong>
+              <a href="{% url 'listar_pet_id' pet.id %}">
+                <strong><i class="fa fa-paw margin-r-5"></i>{{pet.nome | upper}}</strong>
               </a>
+              <br>
+              <br>
               <p class="text-muted">
-                  {{pet.get_categoria_display}} - {{pet.get_cor_display}}             
+                <b>CATEGORIA:</b>   {{pet.get_categoria_display}}  |  <b>COR:</b> {{pet.get_cor_display}}             
               </p>
+              <br>
               {% endfor %}
               <hr>            
               <div class="row">
                 <div class="col-md-12">
-                  <a href="#" class="btn btn-primary btn-block">Cadastrar Pet</a>
+                  <a href="{% url 'cadastrar_pet' cliente.id %}" class="btn btn-primary btn-block">Cadastrar Pet</a>
                 </div>
               </div>
             </div>

@@ -13,26 +13,29 @@ Listagem de Pet
             <!-- Profile Image -->
             <div class="box box-primary">
                 <div class="box-body box-profile">
-                    <h3 class="profile-username text-center">{{pet.nome}}</h3>
+                    <h3 class="profile-username text-center"><b>{{pet.nome|upper}}</b></h3>
 
-                    <p class="text-muted text-center">{{pet.get_categoria_display}}</p>
+                    <p class="text-muted text-center"><b>{{pet.get_categoria_display}}</b></p>
 
                     <ul class="list-group list-group-unbordered">
                         <li class="list-group-item">
-                            <b>IDADE</b> <a class="pull-right">{{pet.idade}}</a>
+                            <b>IDADE</b> <a class="pull-right">{{pet.idade}} ano(s)</a>
                         </li>
                         <li class="list-group-item">
-                            <b>COR:</b> <a class="pull-right">{{pet.get_cor_display}}</a>
+                            <b>COR</b> <a class="pull-right">{{pet.get_cor_display}}</a>
                         </li>
                         <li class="list-group-item">
-                            <b>GÊNERO: </b> <a class="pull-right">{{pet.get_genero_display}}</a>
+                            <b>GÊNERO</b> <a class="pull-right">{{pet.get_genero_display}}</a>
                         </li>
                         <li class="list-group-item">
-                            <b>RAÇA:</b> <a class="pull-right">{{pet.get_raca_display}}</a>
+                            <b>RAÇA</b> <a class="pull-right">{{pet.raca|upper}}</a>
                         </li>
                         <li class="list-group-item">
-                            <b>PESO:</b> <a class="pull-right">{{pet.get_peso_display}}</a>
+                            <b>PESO</b> <a class="pull-right">{{pet.peso}} kilo(s)</a>
                         </li>
+                        <li class="list-group-item">
+                            <b>Cadastrado em</b> <a class="pull-right">{{pet.created_on}}</a>
+                        </li>  
                     </ul>
                     <br>
                 </div>
