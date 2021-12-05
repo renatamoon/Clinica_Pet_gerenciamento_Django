@@ -18,6 +18,7 @@ def listar_consultas(id):
 
 def listar_consultas_pets(id):
     consultas = ConsultaPet.objects.filter(pet__proprietario=id).all().order_by('-data')
+    #tabela de pets e buscando o proprietario para verificar se o dono é igual ao id que estamos passando como parametro
     return consultas
 
 def listar_consulta(id):

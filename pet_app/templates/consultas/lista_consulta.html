@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load meus_filtros %}
+{% block title %}
+LISTA DE CONSULTAS
+{% endblock title %}
+
+{% block content %}
+<section class="invoice">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                <i class="fa fa-globe"></i> <b>RESUMO DA CONSULTA</b>
+                <small class="pull-right"><b>Data:</b> {{consulta.data}}</small>
+            </h2>
+        </div>
+    </div>
+    <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+            <b>Consulta</b>
+            <br>
+            <b>Data:</b> {{consulta.data}} <br>
+            <b>Motivo: </b> {{consulta.motivo_consulta}} <br>           
+        </div>
+        <div class="col-sm-4 invoice-col">
+            <b>Pet</b>
+            <br>
+            <b>Nome: </b> {{consulta.pet.nome}} <br>
+            <b>Idade: </b> {{consulta.pet.idade}} ano(s)<br>
+            <b>Peso: </b> {{consulta.pet.peso}} kilo(s)<br>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <b>DADOS DA CONSULTA</b>
+            <br>
+            <b>Data:</b> {{consulta.data}} <br>
+            <b>Médico Veterinário:</b> {{consulta.doutor}} <br>
+            <b>Especialidade:</b> {{consulta.especialidade}} <br>                    
+            <b>Medicamentos Prescritos: </b> {{consulta.medicamentos_prescritos}} <br>
+            <b>Medicamentos atuais: </b> {{consulta.medicamento_atual}} <br>
+            <b>Exames Prescritos: </b> {{consulta.exames}} <br>
+            <b>Observações: </b> {{consulta.exames}} <br>
+            
+        </div>
+    </div>
+
+    <div class="row no-print">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-primary pull-right" onclick="window.print();">
+                <i class="fa fa-print"> Imprimir</i>
+            </button>
+        </div>
+    </div>
+
+</section>
+
+{% endblock content %}

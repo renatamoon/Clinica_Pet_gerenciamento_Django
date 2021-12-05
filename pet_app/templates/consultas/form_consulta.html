@@ -5,19 +5,19 @@ Cadastro de Consulta
 {% endblock title %}
 
 {% block content %}
-<div class="box box-primary">
+<div class="box box-solid box-primary">
     <div class="box-header with-border">
-        <br>
-        <h3 class="box-title"><b>FORMULÁRIO DE CONSULTAS</b></h3>
-        <br>
-        <br>
-    </div>
+        <div class="card-title"><h3>            
+            <b>CADASTRO DE CONSULTAS</b>            
+        </div>    
+    </div>    
+    <br>
     <div class="box-body">
         <form method="post">
             {% csrf_token %}
             <div class="form-group">
                 {{ form_consulta.motivo_consulta.errors }}
-                <label>MOTIVO DA COSULTA </label>
+                <label>MOTIVO DA COSULTA: </label>
                 {{ form_consulta.motivo_consulta|addclass:'form-control'}}
             </div>
 
