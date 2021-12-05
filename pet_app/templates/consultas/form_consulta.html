@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load meus_filtros %}
+{% block title %}
+Cadastro de Consulta
+{% endblock title %}
+
+{% block content %}
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <br>
+        <h3 class="box-title"><b>FORMULÁRIO DE CONSULTAS</b></h3>
+        <br>
+        <br>
+    </div>
+    <div class="box-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form_consulta.motivo_consulta.errors }}
+                <label>MOTIVO DA COSULTA </label>
+                {{ form_consulta.motivo_consulta|addclass:'form-control'}}
+            </div>
+
+            <div class="form-group">
+                {{ form_consulta.especialidade.errors }}
+                <label>ESPECIALIDADE: </label>
+                {{ form_consulta.especialidade|addclass:'form-control'}}
+            </div>
+
+            <div class="form-group">
+                {{ form_consulta.doutor.errors }}
+                <label>DOUTOR: </label>
+                {{ form_consulta.doutor|addclass:'form-control' }}
+            </div>
+
+            <div class="form-group">
+                {{ form_consulta.medicamento_atual.errors }}
+                <label>MEDICAMENTO ATUAL: </label>
+                {{ form_consulta.medicamento_atual|addclass:'form-control'}}
+            </div>
+            <div class="form-group">
+                {{ form_consulta.medicamentos_prescritos.errors }}
+                <label>MEDICAMENTOS PRESCRITOS: </label>
+                {{ form_consulta.medicamentos_prescritos|addclass:'form-control'}}
+            </div>
+
+            <div class="form-group">
+                {{ form_consulta.exames.errors }}
+                <label>EXAMES PRESCRITOS: </label>
+                {{ form_consulta.exames|addclass:'form-control'}}
+            </div>
+
+            <div class="form-group">
+                {{ form_consulta.observacoes.errors }}
+                <label>OBSERVAÇÕES: </label>
+                {{ form_consulta.observacoes|addclass:'form-control'}}
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
