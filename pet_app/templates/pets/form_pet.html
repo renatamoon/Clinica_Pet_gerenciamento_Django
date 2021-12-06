@@ -13,10 +13,8 @@ CADASTRO DE PETS
     </div>
     <div class="box-body">
     <form method="POST">
-        {% csrf_token %}       
-        <h3><b>DADOS DO PET</b></h3>
-        <br>
-
+        {% csrf_token %}  
+        <br>     
         <div class="form-group">
         {{ form_pet.nome.errors }}
         <label>NOME DO PET:</label>
@@ -31,13 +29,13 @@ CADASTRO DE PETS
 
         <div class="form-group">
         {{ form_pet.genero.errors }}
-        <label>GENERO:</label>
+        <label>GÊNERO:</label>
         {{form_pet.genero|addclass:'form-control' }}
         </div>
 
         <div class="form-group">
         {{ form_pet.categoria.errors }}
-        <label>CARTEGORIA:</label>
+        <label>CATEGORIA:</label>
         {{form_pet.categoria|addclass:'form-control' }}
         </div>
 

@@ -43,3 +43,7 @@ def editar_pet(request, id):
         return redirect('listar_pets')
     return render(request, 'pets/form_pet.html', {'form_pet': form_pet})
 
+
+def listar_pets(request):
+    pets = pet_service.listar_pets_all()
+    return render(request, 'pets/listar_pets.html', {'pets':pets})

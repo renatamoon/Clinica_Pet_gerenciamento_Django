@@ -13,6 +13,10 @@ def listar_pets(id):
     return pets
 
 
+def listar_pets_all():
+    return Pet.objects.all()    
+
+
 def editar_pet(pet, pet_novo):
     pet.proprietario = pet_novo.proprietario
     pet.nome = pet_novo.nome

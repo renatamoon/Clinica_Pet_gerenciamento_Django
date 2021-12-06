@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+LISTA DE PETS CADASTRADOS
+{% endblock title %}
+
+{% block content %}
+
+<div class="box box-solid box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title"><b>LISTA DE PETS CADASTRADOS NA CLÍNICA</b></h3>
+    </div>
+    <div class="box-body">        
+            <table class="table">
+                <thead>
+                    <tr>                        
+                        <th><b>NOME </b></th>
+                        <th><b>IDADE </b></th>
+                        <th><b>GÊNERO</b></th>
+                        <th><b>RAÇA</b></th>
+                        <th><b>PROPRIETÁRIO</b></th>
+                        <th><b>C.P.F</b></th>
+                        <th><b>LOCALIZAÇÃO</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pet in pets %}
+                        <tr>                            
+                            <td>{{ pet.nome|title }}</td>
+                            <td>{{ pet.idade}} ano(s)</td>
+                            <td>{{ pet.get_genero_display}}</td>
+                            <td>{{ pet.raca|upper}}</td>
+                            <td><a href="{% url 'listar_cliente' pet.proprietario.id %}">{{ pet.proprietario.nome}}</a></td>
+                            <td>{{ pet.proprietario.cpf}}</td>
+                            <td>{{ pet.proprietario.endereco.cidade}}, {{ pet.proprietario.endereco.estado}}</td>                              
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <hr>                    
+    </div>
+</div>
+{% endblock content %}

@@ -14,7 +14,7 @@ DADOS DO CLIENTE
             <div class="box-body box-profile">
               <br>
               <h3 class="profile-username text-center"><b>{{ cliente.nome|upper }}</b></h3>
-              <p class="text-muted text-center"><b>Profissão:</b> {{ cliente.profissao }}</p><br>
+              <p class="text-muted text-center"><b>Profissão:</b> {{ cliente.profissao|title }}</p><br>
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
                   <b>Data de nascimento</b> <a class="pull-right">{{ cliente.data_nascimento|date:"d/m/Y" }}</a>
@@ -23,7 +23,7 @@ DADOS DO CLIENTE
                   <b>CPF</b> <a class="pull-right">{{ cliente.cpf }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Endereço</b> <a class="pull-right">{{ cliente.endereco.cidade }} | {{cliente.endereco.estado}}</a>
+                  <b>Endereço</b> <a class="pull-right">{{ cliente.endereco.rua|title }} | {{ cliente.endereco.cidade|title }} | {{cliente.endereco.estado}}</a>
                 </li>
                 <li class="list-group-item">
                   <b>E-mail</b> <a class="pull-right">{{ cliente.email }}</a>
@@ -87,7 +87,7 @@ DADOS DO CLIENTE
                                         {{consulta.data}}
                                     </span>
                                     <h3 class="timeline-header">
-                                        <b>{{consulta.pet.nome}}</b> realizou nova consulta
+                                        <b>{{consulta.pet.nome|title}}</b> realizou nova consulta
                                     </h3>
                                     <div class="timeline-body">
                                         <b>MOTIVO:</b> {{consulta.motivo_consulta|title}}

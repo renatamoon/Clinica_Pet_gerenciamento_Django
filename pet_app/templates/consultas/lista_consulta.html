@@ -9,50 +9,49 @@ LISTA DE CONSULTAS
     <div class="row">
         <div class="col-xs-12">
             <h2 class="page-header">
-                <i class="fa fa-globe"></i> <b>RESUMO DA CONSULTA</b>
-                <small class="pull-right"><b>Data:</b> {{consulta.data}}</small>
+                <i class="fa fa-drivers-license"></i> <b>RESUMO DA CONSULTA</b><br>
+                <br>
+                <small class="pull-left"><b>Realizado em:</b> {{consulta.data}}</small><br>
             </h2>
         </div>
     </div>
-    <div class="row invoice-info">
+    <div class="row invoice-info">        
         <div class="col-sm-4 invoice-col">
-            <b>Consulta</b>
-            <br>
-            <b>Data:</b> {{consulta.data}} <br>
-            <b>Motivo: </b> {{consulta.motivo_consulta}} <br>           
-        </div>
-        <div class="col-sm-4 invoice-col">
-            <b>Pet</b>
-            <br>
+            <i class="fa fa-bars"></i><b>  DADOS DO PET</b>
+            <HR>            
             <b>Nome: </b> {{consulta.pet.nome}} <br>
+            <b>Categoria: </b> {{pet.get_categoria_display}} <br>
             <b>Idade: </b> {{consulta.pet.idade}} ano(s)<br>
             <b>Peso: </b> {{consulta.pet.peso}} kilo(s)<br>
+            <b>Cor: </b>{{consulta.pet.get_cor_display}}<br>
+            <b>Gênero: </b>{{consulta.pet.get_genero_display}}<br>
+            <b>Raça: </b>{{consulta.pet.raca|upper}}<br>
+            <b>Proprietário:</b> {{consulta.pet.proprietario.nome}}        
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-sm-12">
-            <b>DADOS DA CONSULTA</b>
-            <br>
-            <b>Data:</b> {{consulta.data}} <br>
-            <b>Médico Veterinário:</b> {{consulta.doutor}} <br>
-            <b>Especialidade:</b> {{consulta.especialidade}} <br>                    
+            <i class="fa fa-bars"></i><b> DADOS DA CONSULTA</b>
+            <hr>
+            <b>Data da Consulta:</b> {{consulta.data}} <br>
+            <b>Motivo da Consulta: </b> {{consulta.motivo_consulta}} <br>  
+            <b>Médico Veterinário:</b> {{consulta.get_doutor_display}} <br>
+            <b>Especialidade:</b> {{consulta.get_especialidade_display}} <br>                    
             <b>Medicamentos Prescritos: </b> {{consulta.medicamentos_prescritos}} <br>
-            <b>Medicamentos atuais: </b> {{consulta.medicamento_atual}} <br>
+            <b>Medicamentos Atuais: </b> {{consulta.medicamento_atual}} <br>
             <b>Exames Prescritos: </b> {{consulta.exames}} <br>
-            <b>Observações: </b> {{consulta.exames}} <br>
-            
+            <b>Observações: </b> {{consulta.exames}} <br>            
         </div>
     </div>
-
+    <br>
     <div class="row no-print">
         <div class="col-xs-12">
-            <button type="button" class="btn btn-primary pull-right" onclick="window.print();">
+            <button type="button" class="btn btn-primary pull-left" onclick="window.print();">
                 <i class="fa fa-print"> Imprimir</i>
             </button>
         </div>
     </div>
-
 </section>
 
 {% endblock content %}
