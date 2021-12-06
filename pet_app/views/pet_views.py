@@ -15,7 +15,13 @@ def inserir_pet(request, id):
             peso = form_pet.cleaned_data["peso"]
             raca = form_pet.cleaned_data["raca"]
             genero = form_pet.cleaned_data["genero"]
-            pet_novo = pet.Pet(proprietario=proprietario, nome=nome, idade=idade, categoria=categoria, cor=cor, peso=peso, raca=raca, genero=genero)
+            pet_novo = pet.Pet(proprietario=proprietario, 
+                                nome=nome, 
+                                idade=idade, 
+                                categoria=categoria, 
+                                cor=cor, peso=peso, 
+                                raca=raca, 
+                                genero=genero)
             pet_service.cadastrar_pet(pet_novo) #cadastrar no banco de dados
             return redirect('listar_clientes')
     else:

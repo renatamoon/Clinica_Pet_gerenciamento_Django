@@ -2,10 +2,11 @@ from django.db import models
 from django.db.models import enums
 from django.db.models.deletion import CASCADE
 from django_localflavor_br.br_states import  STATE_CHOICES
+from django.contrib.auth.models import AbstractUser
 
 class TimeStampedModel(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
-
+    
     class Meta:
         abstract = True
 
@@ -91,3 +92,15 @@ class ConsultaPet(models.Model):
     exames = models.TextField(null=False, blank=False)
     especialidade = models.CharField(max_length=2, choices=ESPECIALIDADES_CHOICES, blank=True, null=True)     
     observacoes = models.TextField(null=False, blank=False)
+
+
+class Funcionario(AbstractUser):
+    #faz com que a classe funcionario tbem possua os campos de autenticacao de usuario
+    CARGO_CHOICES = [
+        (1, 'Médico Veterinario'),
+        (2, 'Financeiro'),
+        (3, 'Atendimento'),
+    ]
+    nome = models.CharField(max_length=50, null=False, blank=False)
+    nascimento = models.DateField(null=False, blank=False)
+    cargo = models.IntegerField(choices=CARGO_CHOICES, null=False, blank=False)

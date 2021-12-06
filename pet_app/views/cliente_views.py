@@ -70,8 +70,12 @@ def editar_cliente(request, id):
                         estado = form_endereco.cleaned_data["estado"]
                         endereco_novo = endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
                         endereco_editado = endereco_service.editar_endereco(endereco_editar, endereco_novo)
-                        cliente_novo = cliente.Cliente(nome=nome, email=email, data_nascimento=data_nascimento,
-                        profissao=profissao, cpf=cpf, endereco=endereco_editado)
+                        cliente_novo = cliente.Cliente(nome=nome, 
+                                                        email=email, 
+                                                        data_nascimento=data_nascimento,
+                                                        profissao=profissao, 
+                                                        cpf=cpf, 
+                                                        endereco=endereco_editado)
                         cliente_service.editar_cliente(cliente_editar, cliente_novo)
                         return redirect('listar_clientes')
     return render(request, 'clientes/form_cliente.html', {'form_cliente':form_cliente, 'form_endereco': form_endereco})

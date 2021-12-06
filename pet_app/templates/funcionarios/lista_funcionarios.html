@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+LISTA DE FUNCIONÁRIOS
+{% endblock title %}
+
+{% block content %}
+<div class="box box-solid box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title"><b><i>LISTA DE FUNCIONÁRIOS</i></b></h3>
+    </div>
+    <div class="box-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>NOME</th>
+                <th>USERNAME</th>
+                <th>DATA DE NASCIMENTO</th>
+                <th>CARGO</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in funcionarios %}
+            <tr>
+                <td>{{i.nome|title}}</td>
+                <td>{{i.username}}</td>
+                <td>{{i.nascimento}}</td>
+                <td>{{i.get_cargo_display|title}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+
+        <a href="{% url 'cadastrar_funcionario' %}">
+            <button class="btn btn-primary">Cadastrar</button>
+        </a>
+    </div>
+</div>
+{% endblock content %}

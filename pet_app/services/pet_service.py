@@ -3,8 +3,13 @@ from ..models import Pet
 
 def cadastrar_pet(pet):    
     pet_bd = Pet.objects.create(nome=pet.nome, 
-    idade=pet.idade, categoria=pet.categoria, cor=pet.cor, peso=pet.peso, 
-    raca=pet.raca, genero=pet.genero, proprietario=pet.proprietario)
+                                idade=pet.idade, 
+                                categoria=pet.categoria, 
+                                cor=pet.cor, 
+                                peso=pet.peso, 
+                                raca=pet.raca, 
+                                genero=pet.genero, 
+                                proprietario=pet.proprietario)
     pet_bd.save()
 
 #------------buscar todos os pets de um determinado cliente
