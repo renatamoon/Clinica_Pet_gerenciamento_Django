@@ -2,10 +2,11 @@ from django.db import models
 from django.db.models import enums
 from django.db.models.deletion import CASCADE
 from django_localflavor_br.br_states import  STATE_CHOICES
+from django.contrib.auth.models import AbstractUser
 
 class TimeStampedModel(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
-
+    
     class Meta:
         abstract = True
 
@@ -60,6 +61,23 @@ class Pet(TimeStampedModel):
     genero = models.CharField(max_length=2, choices=GENERO_PET_CHOICES, blank=True, null=True)
     proprietario = models.ForeignKey(Cliente, on_delete=models.CASCADE, blank=False, null=False)
 
+    # def clean(self):  
+    #     error_messages = {}      
+    #     nome_pet_enviado = self.nome or None
+    #     nome_pet_salvo = None
+
+    #     pet = Pet.objects.filter(nome=nome_pet_enviado).first()
+        
+    #     if pet:
+    #         nome_pet_salvo = pet.nome
+
+    #         if nome_pet_salvo is not None and self.id != pet.id:
+    #             error_messages['nome'] = 'Nome do Pet já existe'
+
+
+    # class Meta:
+    #     constraints = [models.UniqueConstraint(name='my_pet_unique_constraint', fields = ['nome', 'proprietario'])]   
+    
 
 class ConsultaPet(models.Model):
     DOUTOR_CHOICES = (
@@ -91,3 +109,15 @@ class ConsultaPet(models.Model):
     exames = models.TextField(null=False, blank=False)
     especialidade = models.CharField(max_length=2, choices=ESPECIALIDADES_CHOICES, blank=True, null=True)     
     observacoes = models.TextField(null=False, blank=False)
+
+
+class Funcionario(AbstractUser):
+    #faz com que a classe funcionario tbem possua os campos de autenticacao de usuario
+    CARGO_CHOICES = [
+        (1, 'Médico Veterinario'),
+        (2, 'Financeiro'),
+        (3, 'Atendimento'),
+    ]
+    nome = models.CharField(max_length=50, null=False, blank=False)
+    nascimento = models.DateField()
+    cargo = models.IntegerField(choices=CARGO_CHOICES, null=False, blank=False)

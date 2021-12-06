@@ -3,8 +3,11 @@ from ..forms.cliente_forms import ClienteForm
 from ..forms.endereco_forms import EnderecoClienteForm
 from ..entidades import cliente, endereco
 from ..services import cliente_service, endereco_service, pet_service, consulta_service
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 
+@login_required() #verifica se tem algum user logado
+#se sim ele entra na página, se nao ele não permite a entrada.
 def listar_clientes(request):
     clientes = cliente_service.listar_clientes()
     #todos os clientes cadastrados no banco de dados
@@ -16,7 +19,7 @@ def listar_cliente_id(request, id):
     consultas = consulta_service.listar_consultas_pets(id)
     return render(request, 'clientes/lista_cliente.html', {'cliente': cliente, 'pets': pets, 'consultas': consultas})
 
-
+@login_required()
 def cadastrar_cliente(request):
     if request.method == "POST":
         form_cliente = ClienteForm(request.POST)
@@ -43,6 +46,7 @@ def cadastrar_cliente(request):
     return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente, 'form_endereco': form_endereco})
 
 
+@user_passes_test(lambda u: u.cargo == 2)
 def remover_cliente(request, id):
     cliente = cliente_service.listar_cliente_id(id)
     endereco = endereco_service.listar_endereco_id(cliente.endereco.id)
@@ -53,6 +57,7 @@ def remover_cliente(request, id):
     return render(request, 'clientes/confirma_exclusao.html', {'cliente': cliente})
 
 
+@user_passes_test(lambda u: u.cargo == 2)
 def editar_cliente(request, id):
     cliente_editar = cliente_service.listar_cliente_id(id)
     form_cliente = ClienteForm(request.POST or None, instance=cliente_editar)
@@ -70,8 +75,12 @@ def editar_cliente(request, id):
                         estado = form_endereco.cleaned_data["estado"]
                         endereco_novo = endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
                         endereco_editado = endereco_service.editar_endereco(endereco_editar, endereco_novo)
-                        cliente_novo = cliente.Cliente(nome=nome, email=email, data_nascimento=data_nascimento,
-                        profissao=profissao, cpf=cpf, endereco=endereco_editado)
+                        cliente_novo = cliente.Cliente(nome=nome, 
+                                                        email=email, 
+                                                        data_nascimento=data_nascimento,
+                                                        profissao=profissao, 
+                                                        cpf=cpf, 
+                                                        endereco=endereco_editado)
                         cliente_service.editar_cliente(cliente_editar, cliente_novo)
                         return redirect('listar_clientes')
     return render(request, 'clientes/form_cliente.html', {'form_cliente':form_cliente, 'form_endereco': form_endereco})

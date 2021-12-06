@@ -8,7 +8,7 @@ LISTA DE PETS CADASTRADOS
 
 <div class="box box-solid box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title"><b>LISTA DE PETS CADASTRADOS NA CLÍNICA</b></h3>
+        <h3 class="box-title"><b><i>LISTA DE PETS CADASTRADOS NA CLÍNICA</i></b></h3>
     </div>
     <div class="box-body">        
             <table class="table">
@@ -32,7 +32,7 @@ LISTA DE PETS CADASTRADOS
                             <td>{{ pet.raca|upper}}</td>
                             <td><a href="{% url 'listar_cliente' pet.proprietario.id %}">{{ pet.proprietario.nome}}</a></td>
                             <td>{{ pet.proprietario.cpf}}</td>
-                            <td>{{ pet.proprietario.endereco.cidade}}, {{ pet.proprietario.endereco.estado}}</td>                              
+                            <td>{{ pet.proprietario.endereco.cidade|title}}, {{ pet.proprietario.endereco.estado|upper}}</td>                              
                         </tr>
                     {% endfor %}
                 </tbody>

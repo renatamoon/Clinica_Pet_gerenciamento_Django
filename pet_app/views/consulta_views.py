@@ -1,9 +1,12 @@
+from django.contrib.auth import login
 from ..forms import consulta_forms
 from ..services import pet_service, consulta_service
 from django.shortcuts import render, redirect
 from ..entidades import consulta
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 
+@user_passes_test(lambda u : u.cargo == 1) #somente usuarios (u) em que o cargo for = 1 poderão inserir
 def inserir_consulta(request, id):
     if request.method == "POST":
         form_consulta = consulta_forms.ConsultaPetForm(request.POST)
@@ -31,6 +34,7 @@ def inserir_consulta(request, id):
     return render(request, 'consultas/form_consulta.html', {'form_consulta': form_consulta})
 
 
+@login_required()
 def listar_consulta_id(request, id):
     consulta = consulta_service.listar_consulta(id)
     return render(request, 'consultas/lista_consulta.html', {'consulta': consulta})
