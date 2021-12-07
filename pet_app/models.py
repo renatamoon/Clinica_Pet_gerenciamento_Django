@@ -119,5 +119,5 @@ class Funcionario(AbstractUser):
         (3, 'Atendimento'),
     ]
     nome = models.CharField(max_length=50, null=False, blank=False)
-    nascimento = models.DateField()
+    nascimento = models.DateField(null=False, blank=False)
     cargo = models.IntegerField(choices=CARGO_CHOICES, null=False, blank=False)
