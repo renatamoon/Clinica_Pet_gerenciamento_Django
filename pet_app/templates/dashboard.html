@@ -7,22 +7,24 @@
 
 
 {% block 'head' %}
+    <br><br><br>
+    <div class="center-align">    
+        <p style="font-size: 100px; font-weight: 100; text-align: center">DASHBOARD DA <strong>CLÍNICA</strong></p>     
+    </div>
 
 {% endblock %}
 
 {% block 'body' %}
 
 <div class="container">
-    <br>
+    
+    <hr>
     <div class="row">
-
-        <div  class="col-md informacoes_basicas">
-            
+        <div  class="col-md informacoes_basicas">            
             <h1> <svg class="icone" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
                 <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-            </svg> &nbspR$ <span id="faturamento_total">362.000,00</span></h1> 
-            
+            </svg> &nbspR$ <span id="faturamento_total">362.000,00</span></h1>             
         </div>
 
         <div class="col-md informacoes_basicas">
@@ -41,7 +43,7 @@
               </svg> <h1>&nbspR$ 268.550,00</h1> 
         </div>       
     </div>
-    <br>
+    <br><br><br>
     <hr>
     <div class="row">        
         <div class="col-md">
@@ -77,8 +79,106 @@
     </div>
 </div>
 <br>
+<br><br><br><br>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">    
+    
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
 
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h3 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>CLÍNICA <b>PET</b>
+          </h3>
+          <p>
+            O dashboard renderizado ainda é estático. Serão conectados ao banco de dados em breve.
+            Como teremos que fazer as views, models e rotas, tem muita coisa a ser feita.
+          </p>
+        </div>
+        <!-- Grid column -->
 
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            SERVIÇOS
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Nosso Site</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Contatos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Endereços</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Produtos</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="{% url 'cadastrar_cliente' %}" class="text-reset">Cadastrar cliente</a>
+          </p>
+          <p>
+            <a href="{% url 'listar_clientes' %}" class="text-reset">Lista de Clientes</a>
+          </p>
+          <p>
+            <a href="{% url 'listar_pets' %}" class="text-reset">Lista de Pets</a>
+          </p>
+          <p>
+            <a href="{% url 'listar_clientes' %}" class="text-reset">Lista de Clientes</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> São Paulo, SP, Brasil</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            clinicapet@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 55 11 2437-2121</p>
+          <p><i class="fas fa-print me-3"></i> + 55 11 97854-2154</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">ClinicaPet.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{% static 'js/js.js' %}"></script>
