@@ -46,7 +46,7 @@ def cadastrar_cliente(request):
     return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente, 'form_endereco': form_endereco})
 
 
-@user_passes_test(lambda u: u.cargo == 2)
+@login_required()
 def remover_cliente(request, id):
     cliente = cliente_service.listar_cliente_id(id)
     endereco = endereco_service.listar_endereco_id(cliente.endereco.id)
@@ -57,7 +57,7 @@ def remover_cliente(request, id):
     return render(request, 'clientes/confirma_exclusao.html', {'cliente': cliente})
 
 
-@user_passes_test(lambda u: u.cargo == 2)
+@login_required()
 def editar_cliente(request, id):
     cliente_editar = cliente_service.listar_cliente_id(id)
     form_cliente = ClienteForm(request.POST or None, instance=cliente_editar)

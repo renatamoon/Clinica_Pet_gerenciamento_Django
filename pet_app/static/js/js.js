@@ -1,19 +1,3 @@
-function gera_cor(qtd = 1) {
-  var bg_color = [];
-  var border_color = [];
-  for (let i = 0; i < qtd; i++) {
-    let r = Math.random() * 255;
-    let g = Math.random() * 255;
-    let b = Math.random() * 255;
-    bg_color.push(`rgba(${r}, ${g}, ${b}, ${0.2})`);
-    border_color.push(`rgba(${r}, ${g}, ${b}, ${1})`);
-  }
-
-  return [bg_color, border_color];
-}
-
-
-
 function renderiza_faturamento_mensal() {
   const ctx = document.getElementById("faturamento_mensal").getContext("2d"); 
   const myChart = new Chart(ctx, {
@@ -33,22 +17,26 @@ function renderiza_faturamento_mensal() {
         "Nov",
         "Dez",
       ],
-      datasets: [
-        {
+      datasets: [{
           label: "faturamento",
-          data: [
-            15000.00, 18000.00, 30000.00, 52000.00, 28000.00, 68000.00, 12500.00, 19000.00, 38000.00, 56500.00, 25000.00,
-            39.8,
-          ],
-          backgroundColor: "#CB1EA8",
-          borderColor: "#FFFFFF",
+          data: [15000.0, 18000.0, 30000.0, 52000.0, 28000.0, 68000.0, 12500.0,
+            19000.0, 38000.0, 56500.0, 25000.0, 39.8,],
+          backgroundColor: "transparent",          
+          borderColor: "rgba(77,166,253,0.85)",
           borderWidth: 0.2,
+          display: true,
+          responsive: true,
+          fill: false,
+          elements: {
+            bar: {
+              borderWidth: 3,
+            }
+          }
         },
       ],
     },
   });
 }
-
 
 
 
@@ -77,7 +65,7 @@ function renderiza_consultas_mensal() {
           data: [20, 22, 15, 56, 20, 80, 52, 20, 22, 45, 47, 68],
           backgroundColor: "	#00cccc",
           borderColor: "#FFFFFF",
-          borderWidth: 0.2,
+          borderWidth: 0.5,
         },
       ],
     },

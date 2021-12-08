@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-  color: #08558B;
+  color: #03586172;
 }
 
 /* container login */
@@ -65,12 +65,7 @@ input {
 }
 
 input:focus {
-  border-bottom: 2px solid #08558B;
-}
-
-#forgot-pass {
-  display: block;
-  text-align: right;
+  border-bottom: 2px solid #03424d;
 }
 
 input[type="submit"] {
@@ -82,7 +77,7 @@ input[type="submit"] {
   margin-top: 30px;
   cursor: pointer;
   color: #FFF;
-  background-color: #08558B;
+  background-color: #034146;
   font-weight: bold;
 }
 
@@ -119,12 +114,12 @@ input[type="submit"]:hover {
         <br><br>
     <h1>LOGIN | <b>CLÍNICA PET</b></h1>
         <br>
-    <form action="{% url 'dashboard' %}" method="POST">
+    <form action="{% url 'listar_pets' %}" method="POST">
         {% csrf_token %}        
     
-     <label for="email">E-mail</label>
+     <label for="username">E-mail</label>
      <br>
-      <input type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off">
+      <input type="euserna" name="username" id="username" placeholder="Digite seu usuário" autocomplete="off">
       <label for="password">Senha</label>
       <br>
       <input type="password" name="password" id="password" placeholder="Digite sua senha">      
