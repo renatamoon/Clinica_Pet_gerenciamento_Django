@@ -5,6 +5,7 @@
   <a href="#projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias">Tecnologias utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#instalacao">Como Executar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
+  <a href="#imagens">Imagens do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
   <a href="#links_apps">Links Úteis</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  
 </p>
@@ -23,7 +24,7 @@ Algumas funcionalidades:
     *Print da página do extrato da consulta;
     *Envio por e-mail dos dados da consulta;
 
-> 🟩 Status do projeto: EM ANDAMENTO ... <br>
+🟩 Status do projeto: EM ANDAMENTO ... <br>
 
 <hr>
   
@@ -84,7 +85,6 @@ DATABASES = {
     }
 }
 ```
-
  *Migre o banco de dados com: `python manage.py migrate` <br>
  *Execute o servidor: `python manage.py runserver` <br>
   
