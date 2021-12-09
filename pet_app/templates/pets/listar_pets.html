@@ -20,8 +20,7 @@ LISTA DE PETS CADASTRADOS & DASHBOARD
                         <th><b>GÊNERO</b></th>
                         <th><b>RAÇA</b></th>
                         <th><b>PROPRIETÁRIO</b></th>
-                        <th><b>C.P.F</b></th>
-                        <th><b>LOCALIZAÇÃO</b></th>
+                        <th><b>C.P.F</b></th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +31,7 @@ LISTA DE PETS CADASTRADOS & DASHBOARD
                             <td>{{ pet.get_genero_display}}</td>
                             <td>{{ pet.raca|upper}}</td>
                             <td><a href="{% url 'listar_cliente' pet.proprietario.id %}">{{ pet.proprietario.nome}}</a></td>
-                            <td>{{ pet.proprietario.cpf}}</td>
-                            <td>{{ pet.proprietario.endereco.cidade|title}}, {{ pet.proprietario.endereco.estado|upper}}</td>                              
+                            <td>{{ pet.proprietario.cpf}}</td>                                  
                         </tr>
                     {% endfor %}
                 </tbody>
