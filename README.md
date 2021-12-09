@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': 'host_bd',
         'PORT': 'porta_bd',
-        'NAME': 'ediaristas',
+        'NAME': 'pet_app',
         'USER': 'usuario_bd',
         'PASSWORD': 'senha_bd'    
     }
@@ -90,6 +90,63 @@ DATABASES = {
   
 <hr>
 
+## <a id="imagens"> 🔴 IMAGENS: </a> 
+<br>
+-Tela de clientes cadastrados na clínica:
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/87100340/145451834-d6e8391b-2b42-4449-83d1-8c65af0225fa.png)
+<br>
+<br>
+-Formulário de cadastro de Clientes:
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/87100340/145452401-21d0db80-e29c-4b37-87e7-bc7fd217a7b0.png)
+<br>
+<br>
+-Tela com a listagem de pets cadastrados:
+<br>
+<br>  
+![image](https://user-images.githubusercontent.com/87100340/145452461-e4a51748-77c9-489e-a698-6998348dab52.png)
+br>
+<br>  
+-Perfil do cliente listando seus dados, os pets cadastrados em nome dele e consultas de todos os pets cadastrados:
+ <br>
+<br>
+![image](https://user-images.githubusercontent.com/87100340/145452556-3debd028-0ce5-45ba-978e-11f9f9229872.png)
+<br>
+<br>
+-Perfil do Pet cadastrado naquele usuário:
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/87100340/145453080-24462c66-0d61-4f1a-b132-23d3f06f5160.png)
+<br>
+<br> 
+-Extrato do formulário com todas as infos das consultas:
+<br>
+<br> 
+![image](https://user-images.githubusercontent.com/87100340/145452701-6c07b478-61f5-45e9-81d5-4e7a754d88bd.png)
+<br>
+<br>
+-Extrato do formulário com todas as infos das consultas:
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/87100340/145452898-3ae5a416-cc30-46da-975b-afba07ade254.png)
+<br>
+<br>
+-Funcionários cadastrados na clínica onde os mesmos tem seus acessos conforme informado nas views e com certas permissões:
+<br>
+<br>  
+![image](https://user-images.githubusercontent.com/87100340/145452832-f1c2a4a0-5389-4a33-b11b-af0a2d27aed6.png)  
+<br>
+<br>
+-DASHBOARD da clínica em construção (ainda estático) apenas aguardando o módulo de pagamentos que será integrado em breve.
+<br>
+<br>    
+![image](https://user-images.githubusercontent.com/87100340/145453617-fda3eb31-4055-4794-9ade-7aab5eb3134a.png)
+
+<hr>
+  
 ## <a id="links_apps"> 🔴 LINKS ÚTEIS </a> 
 
 *USANDO O ADMINLTE3 - Bootstrap Admin Dashboard Template<br>
