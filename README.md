@@ -91,59 +91,32 @@ DATABASES = {
 <hr>
 
 ## <a id="imagens"> 🔴 IMAGENS: </a> 
-<br>
--Tela de clientes cadastrados na clínica:
-<br>
-<br>
-![image](https://user-images.githubusercontent.com/87100340/145451834-d6e8391b-2b42-4449-83d1-8c65af0225fa.png)
+-Tela de clientes cadastrados na clínica:<br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456158-80ad12f2-8049-45d5-a409-d899cfb1f9c1.png)
 <br>
 <br>
--Formulário de cadastro de Clientes:
-<br>
-<br>
-![image](https://user-images.githubusercontent.com/87100340/145452401-21d0db80-e29c-4b37-87e7-bc7fd217a7b0.png)
-<br>
-<br>
--Tela com a listagem de pets cadastrados:
-<br>
-<br>  
-![image](https://user-images.githubusercontent.com/87100340/145452461-e4a51748-77c9-489e-a698-6998348dab52.png)
-br>
-<br>  
--Perfil do cliente listando seus dados, os pets cadastrados em nome dele e consultas de todos os pets cadastrados:
- <br>
-<br>
-![image](https://user-images.githubusercontent.com/87100340/145452556-3debd028-0ce5-45ba-978e-11f9f9229872.png)
-<br>
-<br>
--Perfil do Pet cadastrado naquele usuário:
-<br>
-<br>
-![image](https://user-images.githubusercontent.com/87100340/145453080-24462c66-0d61-4f1a-b132-23d3f06f5160.png)
-<br>
-<br> 
--Extrato do formulário com todas as infos das consultas:
-<br>
-<br> 
-![image](https://user-images.githubusercontent.com/87100340/145452701-6c07b478-61f5-45e9-81d5-4e7a754d88bd.png)
-<br>
-<br>
--Extrato do formulário com todas as infos das consultas:
-<br>
-<br>
-![image](https://user-images.githubusercontent.com/87100340/145452898-3ae5a416-cc30-46da-975b-afba07ade254.png)
-<br>
-<br>
--Funcionários cadastrados na clínica onde os mesmos tem seus acessos conforme informado nas views e com certas permissões:
-<br>
-<br>  
-![image](https://user-images.githubusercontent.com/87100340/145452832-f1c2a4a0-5389-4a33-b11b-af0a2d27aed6.png)  
-<br>
-<br>
--DASHBOARD da clínica em construção (ainda estático) apenas aguardando o módulo de pagamentos que será integrado em breve.
-<br>
-<br>    
-![image](https://user-images.githubusercontent.com/87100340/145453617-fda3eb31-4055-4794-9ade-7aab5eb3134a.png)
+-Tela de Cadastro do Cliente:<br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456795-82fbb790-b016-4a09-a9cd-247ee0c8ff55.png)
+<br><br>
+-Tela com a listagem de pets cadastrados:<br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456212-2d5c9e63-a3fa-47e0-a1a3-d20a76f99b00.png)
+<br><br>
+-Perfil do cliente listando seus dados, os pets cadastrados em nome dele e consultas de todos os pets cadastrados:<br>  
+![image](https://user-images.githubusercontent.com/87100340/145456320-91190927-1ac3-40bd-b935-355c35bb92ae.png)
+<br><br>
+-Extrato do formulário com todas as infos das consultas:<br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456372-652f9c2a-4696-45ce-a83f-e0305e06c9fa.png)
+<br><br>
+-Lista de Funcionários cadastrados na clínica:<br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456266-f7bc5aad-358f-4930-9035-4051efac0e3f.png)
+<br><br>
+-Perfil do pet com todos os seus dados (por id) e também as consultas realizadas por este pet:<br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456440-e3586279-1cea-4264-8b7a-abb56e7d3ebf.png)
+<br><br>
+ -DASHBOARD da clínica em construção (ainda estático) apenas aguardando o módulo de pagamentos que será integrado em breve:
+ <br><br>
+![image](https://user-images.githubusercontent.com/87100340/145456551-61791d57-a679-4223-b03d-3eaf0b476499.png)
+<br><br>
 
 <hr>
   
