@@ -6,7 +6,7 @@ from ..services import cliente_service, endereco_service, pet_service, consulta_
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 
-@login_required() #verifica se tem algum user logado
+#@login_required() #verifica se tem algum user logado
 #se sim ele entra na página, se nao ele não permite a entrada.
 def listar_clientes(request):
     clientes = cliente_service.listar_clientes()
@@ -19,7 +19,7 @@ def listar_cliente_id(request, id):
     consultas = consulta_service.listar_consultas_pets(id)
     return render(request, 'clientes/lista_cliente.html', {'cliente': cliente, 'pets': pets, 'consultas': consultas})
 
-@login_required()
+#@login_required()
 def cadastrar_cliente(request):
     if request.method == "POST":
         form_cliente = ClienteForm(request.POST)
@@ -46,7 +46,7 @@ def cadastrar_cliente(request):
     return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente, 'form_endereco': form_endereco})
 
 
-@login_required()
+#@login_required()
 def remover_cliente(request, id):
     cliente = cliente_service.listar_cliente_id(id)
     endereco = endereco_service.listar_endereco_id(cliente.endereco.id)
@@ -57,7 +57,7 @@ def remover_cliente(request, id):
     return render(request, 'clientes/confirma_exclusao.html', {'cliente': cliente})
 
 
-@login_required()
+#@login_required()
 def editar_cliente(request, id):
     cliente_editar = cliente_service.listar_cliente_id(id)
     form_cliente = ClienteForm(request.POST or None, instance=cliente_editar)

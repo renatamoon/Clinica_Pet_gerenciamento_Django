@@ -23,7 +23,7 @@ def login_usuario(request):
     return render(request, 'autenticacao/login.html', {'form_login': form_login})
 
 
-@login_required()
+#@login_required()
 def deslogar_usuario(request):
     logout(request)
     return redirect('login')
