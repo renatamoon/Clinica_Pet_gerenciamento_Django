@@ -9,47 +9,54 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 #@login_required() #verifica se tem algum user logado
 #se sim ele entra na página, se nao ele não permite a entrada.
 def listar_clientes(request):
-    clientes = cliente_service.listar_clientes()
+    clientes        =       cliente_service.listar_clientes()
     #todos os clientes cadastrados no banco de dados
     return render(request, 'clientes/lista_clientes.html', {'clientes': clientes})
 
 def listar_cliente_id(request, id):
-    cliente = cliente_service.listar_cliente_id(id)
-    pets = pet_service.listar_pets(id)
-    consultas = consulta_service.listar_consultas_pets(id)
-    return render(request, 'clientes/lista_cliente.html', {'cliente': cliente, 'pets': pets, 'consultas': consultas})
+    cliente         =       cliente_service.listar_cliente_id(id)
+    pets            =       pet_service.listar_pets(id)
+    consultas       =       consulta_service.listar_consultas_pets(id)
+    return render(request, 'clientes/lista_cliente.html', {'cliente': cliente, 
+                                                            'pets': pets, 
+                                                            'consultas': consultas})
 
 #@login_required()
 def cadastrar_cliente(request):
     if request.method == "POST":
-        form_cliente = ClienteForm(request.POST)
-        form_endereco = EnderecoClienteForm(request.POST)
+        form_cliente        =       ClienteForm(request.POST)
+        form_endereco       =       EnderecoClienteForm(request.POST)
         if form_cliente.is_valid():
-            nome = form_cliente.cleaned_data["nome"]
-            email = form_cliente.cleaned_data["email"]
-            cpf = form_cliente.cleaned_data["cpf"]
-            data_nascimento = form_cliente.cleaned_data["data_nascimento"]
+            nome                    =       form_cliente.cleaned_data["nome"]
+            email                   =       form_cliente.cleaned_data["email"]
+            cpf                     =       form_cliente.cleaned_data["cpf"]
+            data_nascimento         =       form_cliente.cleaned_data["data_nascimento"]
             profissao = form_cliente.cleaned_data["profissao"]
             if form_endereco.is_valid():
-                rua = form_endereco.cleaned_data["rua"]
-                cidade = form_endereco.cleaned_data["cidade"]
-                estado = form_endereco.cleaned_data["estado"]
-                endereco_novo = endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
-                endereco_bd = endereco_service.cadastrar_endereco(endereco_novo)
-                cliente_novo = cliente.Cliente(nome=nome, email=email, data_nascimento=data_nascimento,
-                                           profissao=profissao, cpf=cpf, endereco=endereco_bd)
+                rua                     =       form_endereco.cleaned_data["rua"]
+                cidade                  =       form_endereco.cleaned_data["cidade"]
+                estado                  =       form_endereco.cleaned_data["estado"]
+                endereco_novo           =       endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
+                endereco_bd             =       endereco_service.cadastrar_endereco(endereco_novo)
+                cliente_novo            =       cliente.Cliente(nome=nome, 
+                                                                email=email, 
+                                                                data_nascimento=data_nascimento,
+                                                                profissao=profissao, 
+                                                                cpf=cpf, 
+                                                                endereco=endereco_bd)
                 cliente_service.cadastrar_cliente(cliente_novo)
                 return redirect('listar_clientes')
     else:
-        form_cliente = ClienteForm()
-        form_endereco = EnderecoClienteForm()
-    return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente, 'form_endereco': form_endereco})
+        form_cliente        =        ClienteForm()
+        form_endereco       =        EnderecoClienteForm()
+    return render(request, 'clientes/form_cliente.html', {'form_cliente': form_cliente,
+                                                            'form_endereco': form_endereco})
 
 
 #@login_required()
 def remover_cliente(request, id):
-    cliente = cliente_service.listar_cliente_id(id)
-    endereco = endereco_service.listar_endereco_id(cliente.endereco.id)
+    cliente         =       cliente_service.listar_cliente_id(id)
+    endereco        =       endereco_service.listar_endereco_id(cliente.endereco.id)
     if request.method == "POST":
         cliente_service.remover_cliente(cliente)
         endereco_service.remover_endereco(endereco)
@@ -59,23 +66,23 @@ def remover_cliente(request, id):
 
 #@login_required()
 def editar_cliente(request, id):
-    cliente_editar = cliente_service.listar_cliente_id(id)
-    form_cliente = ClienteForm(request.POST or None, instance=cliente_editar)
-    endereco_editar = endereco_service.listar_endereco_id(cliente_editar.endereco.id)
-    form_endereco = EnderecoClienteForm(request.POST or None, instance=endereco_editar)
+    cliente_editar          =           cliente_service.listar_cliente_id(id)
+    form_cliente            =           ClienteForm(request.POST or None, instance=cliente_editar)
+    endereco_editar         =           endereco_service.listar_endereco_id(cliente_editar.endereco.id)
+    form_endereco           =           EnderecoClienteForm(request.POST or None, instance=endereco_editar)
     if form_cliente.is_valid():
-            nome = form_cliente.cleaned_data["nome"]
-            email = form_cliente.cleaned_data["email"]
-            cpf = form_cliente.cleaned_data["cpf"]
-            data_nascimento = form_cliente.cleaned_data["data_nascimento"]
-            profissao = form_cliente.cleaned_data["profissao"]
+            nome                    =       form_cliente.cleaned_data["nome"]
+            email                   =       form_cliente.cleaned_data["email"]
+            cpf                     =       form_cliente.cleaned_data["cpf"]
+            data_nascimento         =       form_cliente.cleaned_data["data_nascimento"]
+            profissao               =       form_cliente.cleaned_data["profissao"]
             if form_endereco.is_valid():
-                        rua = form_endereco.cleaned_data["rua"]
-                        cidade = form_endereco.cleaned_data["cidade"]
-                        estado = form_endereco.cleaned_data["estado"]
-                        endereco_novo = endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
-                        endereco_editado = endereco_service.editar_endereco(endereco_editar, endereco_novo)
-                        cliente_novo = cliente.Cliente(nome=nome, 
+                        rua                 =       form_endereco.cleaned_data["rua"]
+                        cidade              =       form_endereco.cleaned_data["cidade"]
+                        estado              =       form_endereco.cleaned_data["estado"]
+                        endereco_novo       =       endereco.Endereco(rua=rua, cidade=cidade, estado=estado)
+                        endereco_editado    =       endereco_service.editar_endereco(endereco_editar, endereco_novo)
+                        cliente_novo        =       cliente.Cliente(nome=nome, 
                                                         email=email, 
                                                         data_nascimento=data_nascimento,
                                                         profissao=profissao, 
@@ -83,4 +90,5 @@ def editar_cliente(request, id):
                                                         endereco=endereco_editado)
                         cliente_service.editar_cliente(cliente_editar, cliente_novo)
                         return redirect('listar_clientes')
-    return render(request, 'clientes/form_cliente.html', {'form_cliente':form_cliente, 'form_endereco': form_endereco})
+    return render(request, 'clientes/form_cliente.html', {'form_cliente':form_cliente, 
+                                                        'form_endereco': form_endereco})

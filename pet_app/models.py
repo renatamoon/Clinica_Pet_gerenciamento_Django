@@ -13,20 +13,20 @@ class TimeStampedModel(models.Model):
 #model do cliente - campos referente ao cliente no banco de dados
 
 class EnderecoCliente(models.Model):
-    rua = models.CharField(max_length=50, null=False, blank=False)
-    cidade = models.CharField(max_length=30, null=False, blank=False)
-    estado = models.CharField(max_length=2, choices=STATE_CHOICES)
+    rua         =       models.CharField(   max_length=50, null=False, blank=False  )
+    cidade      =       models.CharField(   max_length=30, null=False, blank=False  )
+    estado      =       models.CharField(   max_length=2, choices=STATE_CHOICES     )
     #state choices foi importado para não precisar declarar manualmente7
 
 
 class Cliente(TimeStampedModel):
-    nome = models.CharField(max_length=100, null=False, blank=False)
-    email = models.EmailField(null=False, blank=False)
-    endereco = models.ForeignKey(EnderecoCliente, on_delete=models.CASCADE) #quando o usuario for removido, o endereço também
+    nome            =       models.CharField(   max_length=100, null=False, blank=False )
+    email           =       models.EmailField(  null=False, blank=False )
+    endereco        =       models.ForeignKey(  EnderecoCliente, on_delete=models.CASCADE   ) #quando o usuario for removido, o endereço também
     #deve ser removido
-    cpf = models.CharField(max_length=14, unique=True, null=False, blank=True)
-    data_nascimento = models.DateField(null=False, blank=False)
-    profissao = models.CharField(max_length=25, null= False, blank=False)
+    cpf             =       models.CharField(   max_length=14, unique=True, null=False, blank=True  )
+    data_nascimento =       models.DateField(   null=False, blank=False )
+    profissao       =       models.CharField(   max_length=25, null= False, blank=False )
 
 
 class Pet(TimeStampedModel):
@@ -34,6 +34,23 @@ class Pet(TimeStampedModel):
         ('Ca', 'Cachorro'),
         ('Ga', 'Gato'),
         ('Pa', 'Pássaro'),
+    # def clean(self):  
+    #     error_messages = {}      
+    #     nome_pet_enviado = self.nome or None
+    #     nome_pet_salvo = None
+
+    #     pet = Pet.objects.filter(nome=nome_pet_enviado).first()
+        
+    #     if pet:
+    #         nome_pet_salvo = pet.nome
+
+    #         if nome_pet_salvo is not None and self.id != pet.id:
+    #             error_messages['nome'] = 'Nome do Pet já existe'
+
+
+    # class Meta:
+    #     constraints = [models.UniqueConstraint(name='my_pet_unique_constraint', fields = ['nome', 'proprietario'])]   
+    
         ('Ha', 'Hamister'),
     )
 
@@ -52,32 +69,16 @@ class Pet(TimeStampedModel):
         ('Ma', 'Macho'),
     )
 
-    nome = models.CharField(max_length=50, null=False, blank=False)
-    idade = models.IntegerField(blank=False, null=False)
-    peso = models.CharField(max_length=50, null=False, blank=False)
-    categoria = models.CharField(max_length=2, choices=CATEGORIA_PET_CHOICES, blank=True, null=True)
-    cor = models.CharField(max_length=2, choices=COR_PET_CHOICES, blank=True, null=True)
-    raca = models.CharField(max_length=20, blank=True, null=True)
-    genero = models.CharField(max_length=2, choices=GENERO_PET_CHOICES, blank=True, null=True)
-    proprietario = models.ForeignKey(Cliente, on_delete=models.CASCADE, blank=False, null=False)
-
-    # def clean(self):  
-    #     error_messages = {}      
-    #     nome_pet_enviado = self.nome or None
-    #     nome_pet_salvo = None
-
-    #     pet = Pet.objects.filter(nome=nome_pet_enviado).first()
-        
-    #     if pet:
-    #         nome_pet_salvo = pet.nome
-
-    #         if nome_pet_salvo is not None and self.id != pet.id:
-    #             error_messages['nome'] = 'Nome do Pet já existe'
+    nome            =          models.CharField(    max_length=50, null=False, blank=False  )
+    idade           =          models.IntegerField( blank=False, null=False )
+    peso            =          models.CharField(    max_length=50, null=False, blank=False  )
+    categoria       =          models.CharField(    max_length=2, choices=CATEGORIA_PET_CHOICES, blank=True, null=True  )
+    cor             =          models.CharField(    max_length=2, choices=COR_PET_CHOICES, blank=True, null=True    )
+    raca            =          models.CharField(    max_length=20, blank=True, null=True    )
+    genero          =          models.CharField(    max_length=2, choices=GENERO_PET_CHOICES, blank=True, null=True )
+    proprietario    =          models.ForeignKey(   Cliente, on_delete=models.CASCADE, blank=False, null=False  )
 
 
-    # class Meta:
-    #     constraints = [models.UniqueConstraint(name='my_pet_unique_constraint', fields = ['nome', 'proprietario'])]   
-    
 
 class ConsultaPet(models.Model):
     DOUTOR_CHOICES = (
@@ -100,15 +101,15 @@ class ConsultaPet(models.Model):
         ('Or', 'Ortopedia'),
     )
 
-    pet = models.ForeignKey(Pet, on_delete=CASCADE, null=False, blank=False)
-    data = models.DateField(null=False, blank=False, auto_now_add=True)
-    doutor = models.CharField(max_length=2, choices=DOUTOR_CHOICES, blank=True, null=True)
-    motivo_consulta = models.CharField(max_length=200, null=False, blank=False)
-    medicamento_atual = models.TextField(null=False, blank=False)
-    medicamentos_prescritos = models.TextField(null=False, blank=False)
-    exames = models.TextField(null=False, blank=False)
-    especialidade = models.CharField(max_length=2, choices=ESPECIALIDADES_CHOICES, blank=True, null=True)     
-    observacoes = models.TextField(null=False, blank=False)
+    pet                 =       models.ForeignKey   (Pet, on_delete=CASCADE, null=False, blank=False)
+    data                =       models.DateField    (null=False, blank=False, auto_now_add=True)
+    doutor              =       models.CharField    (max_length=2, choices=DOUTOR_CHOICES, blank=True, null=True)
+    motivo_consulta     =       models.CharField    (max_length=200, null=False, blank=False)
+    medicamento_atual   =       models.TextField    (null=False, blank=False)
+    medicamentos_prescritos =   models.TextField    (null=False, blank=False)
+    exames              =       models.TextField    (null=False, blank=False)
+    especialidade       =       models.CharField    (max_length=2, choices=ESPECIALIDADES_CHOICES, blank=True, null=True)     
+    observacoes         =       models.TextField    (null=False, blank=False)
 
 
 class Funcionario(AbstractUser):
@@ -118,6 +119,6 @@ class Funcionario(AbstractUser):
         (2, 'Financeiro'),
         (3, 'Atendimento'),
     ]
-    nome = models.CharField(max_length=50, null=False, blank=False)
-    nascimento = models.DateField(null=False, blank=False)
-    cargo = models.IntegerField(choices=CARGO_CHOICES, null=False, blank=False)
+    nome            =       models.CharField      (max_length=50, null=False, blank=False)
+    nascimento      =       models.DateField      (null=False, blank=False)
+    cargo           =       models.IntegerField   (choices=CARGO_CHOICES, null=False, blank=False)

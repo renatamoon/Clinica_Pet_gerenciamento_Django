@@ -23,14 +23,14 @@ def listar_pets_all():
 
 
 def editar_pet(pet, pet_novo):
-    pet.proprietario = pet_novo.proprietario
-    pet.nome = pet_novo.nome
-    pet.idade = pet_novo.idade
-    pet.cor = pet_novo.cor
-    pet.categoria = pet_novo.categoria
-    pet.raca = pet_novo.raca
-    pet.peso = pet_novo.peso
-    pet.genero = pet_novo.genero
+    pet.proprietario        =       pet_novo.proprietario
+    pet.nome                =       pet_novo.nome
+    pet.idade               =       pet_novo.idade
+    pet.cor                 =       pet_novo.cor
+    pet.categoria           =       pet_novo.categoria
+    pet.raca                =       pet_novo.raca
+    pet.peso                =       pet_novo.peso
+    pet.genero              =       pet_novo.genero
     pet.save(force_update=True)
 
 

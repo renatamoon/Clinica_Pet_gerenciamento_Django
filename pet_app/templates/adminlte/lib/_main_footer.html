@@ -3,10 +3,14 @@
 {% block version %} 1.0 {% endblock version %}
 
 {% block legal %}
+
+
     <strong>Copyright &copy; {% now "Y" %}{% if not site %}.{% endif %}
         {% if site %}
             <a href="http://{{ site.domain }}">{{ site.name }}</a>
         {% endif %}
     </strong> All rights
     reserved by <b>CLÍNICA PET</b> | Powered by <b>Django</b>
-{% endblock legal%}
+
+
+{% endblock legal %}
