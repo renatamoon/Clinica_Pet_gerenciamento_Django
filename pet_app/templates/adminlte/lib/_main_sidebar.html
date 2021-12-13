@@ -1,8 +1,17 @@
+<!-- -----------subscrevendo o bootstrap-->
 <style>
 .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
     background-color: black;
 }
+
+.nav-item5{
+    background-color: rgb(124, 5, 5);
+}
+
 </style>
+<!-- ----------- end subscrevendo o bootstrap-->
+
+
 {% extends 'adminlte/lib/_main_sidebar.html' %}
 
 {% block logo_text %}     
@@ -37,6 +46,13 @@ Links de Navegação
     <a href="{% url 'dashboard' %}" class="nav-link">
         <i class="nav-icon fas fa-calendar"></i> 
         <p><b>DASHBOARD</b></p>
+    </a>
+</li>
+
+<li class="nav-item5">
+    <a href="{% url 'logout' %}" class="nav-link">
+        <i class="nav-icon fas fa-calendar"></i> 
+        <p><b>LOGOUT</b></p>
     </a>
 </li>
 

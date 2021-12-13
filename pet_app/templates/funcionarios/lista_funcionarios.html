@@ -6,22 +6,22 @@ LISTA DE FUNCIONÁRIOS
 
 {% block content %}
 <div class="box box-solid box-primary">
-    <div class="box-header with-border"><br>
-        <h3 class="box-title"><b>LISTA DE FUNCIONÁRIOS</b></h3><br><br>
+    <div class="box-header with-border" style="text-align: center;"><br>
+        <p class="box-title" style="font-size: 22px"><b>LISTA DE FUNCIONÁRIOS</b></p><br><br>
     </div>
     <div class="box-body">
         <table class="table">
             <thead>
-            <tr>
-                <th>NOME</th>
-                <th>USERNAME</th>
-                <th>DATA DE NASCIMENTO</th>
-                <th>CARGO</th>
-            </tr>
+                <tr>
+                    <th style="text-align: center">NOME</th>
+                    <th style="text-align: center">USERNAME</th>
+                    <th style="text-align: center">DATA DE NASCIMENTO</th>
+                    <th style="text-align: center">CARGO</th>
+                </tr>
             </thead>
             <tbody>
             {% for i in funcionarios %}
-            <tr>
+            <tr style="text-align: center">
                 <td>{{i.nome|title}}</td>
                 <td>{{i.username}}</td>
                 <td>{{i.nascimento}}</td>
@@ -31,9 +31,8 @@ LISTA DE FUNCIONÁRIOS
             </tbody>
         </table>
         <hr>
-
         <a href="{% url 'cadastrar_funcionario' %}">
-            <button class="btn btn-primary">Cadastrar</button>
+            <button class="btn btn-primary">Cadastrar</button><br>
         </a>
     </div>
 </div>

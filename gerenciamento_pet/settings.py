@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'gerenciamento_pet.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databasesimport os
 
 
 DATABASES = {
@@ -160,7 +160,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-import os
 
 STATIC_URL = '/static/'
 

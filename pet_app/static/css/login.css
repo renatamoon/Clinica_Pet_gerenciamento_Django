@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #323232;
+  border: none;
+}
+
+body {
+  background-color: black;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+a {
+  font-size: .8rem;
+}
+
+a:hover {
+  color: #03586172;
+}
+
+/* container login */
+#login-container {
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border:5px solid;
+  border-image:linear-gradient(45deg,red,rgb(32, 153, 233),purple, pink) 10;
+  text-align: center;
+}
+
+/* formulário */
+form {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+label, input {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  border-bottom: 2px solid #03424d;
+}
+
+input[type="submit"] {
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #034146;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #1B223C;
+  transition: .5s;
+}
+
+/* redes sociais */
+#social-container {
+  margin-bottom: 20px;
+}
+
+#social-container p {
+  margin-bottom: 20px;
+  font-size: 11px;
+}
+
+#social-container i {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  margin: 0 5px;
+  color: #FFF;
+}

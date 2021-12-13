@@ -7,23 +7,23 @@ LISTA DE CLIENTES
 {% block content %}
 
 <div class="box box-solid box-primary">
-    <div class="box-header with-border"><br>
-        <h3 class="box-title"><b>LISTA DE CLIENTES</b></h3><br><br>
+    <div class="box-header with-border" style="text-align: center;"><br>
+        <p class="box-title" style="font-size: 22px;"><b>LISTA DE CLIENTES</b></p><br><br>
     </div>
     <div class="box-body">        
             <table class="table">
                 <thead>
                     <tr>                        
-                        <th><b>NOME </b></th>
-                        <th><b>DATA DE NASCIMENTO </b></th>
-                        <th><b>PROFISSÃO</b></th>
-                        <th><b>CPF</b></th>
-                        <th><b>AÇÕES</b></th>
+                        <th style="text-align: center"><b>NOME </b></th>
+                        <th style="text-align: center"><b>DATA DE NASCIMENTO </b></th>
+                        <th style="text-align: center"><b>PROFISSÃO</b></th>
+                        <th style="text-align: center"><b>CPF</b></th>
+                        <th style="text-align: center"><b>AÇÕES</b></th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for cliente in clientes %}
-                        <tr>                            
+                        <tr style="text-align: center">                            
                             <td><a href="{% url 'listar_cliente' cliente.id %}">{{ cliente.nome|title }}</a></td>
                             <td>{{ cliente.data_nascimento }}</td>
                             <td>{{ cliente.profissao|title }}</td>

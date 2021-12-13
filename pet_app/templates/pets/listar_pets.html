@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 
 {% block title %}
-LISTA DE PETS CADASTRADOS & DASHBOARD
+Pets Cadastrados
 {% endblock title %}
 
 {% block content %}
 
-<div class="box box-solid box-primary">
+<div class="box box-solid box-primary" style="text-align: center; align-items: center; align-content: center">
     <div class="box-header with-border">
         <br>
-        <h3 class="box-title"><b>LISTA DE PETS CADASTRADOS NA CLÍNICA</b></h3><br><br>
+        <p class="box-title" style="font-size: 22px;"><b>LISTA DE PETS CADASTRADOS NA CLÍNICA</b></p><br><br>
     </div>
-    <div class="box-body">        
+    <div class="box-body" style="align-items: center; text-align: center;align-content: center;">        
             <table class="table">
-                <thead>
-                    <tr>                        
-                        <th><b>NOME </b></th>
-                        <th><b>IDADE </b></th>
-                        <th><b>GÊNERO</b></th>
-                        <th><b>RAÇA</b></th>
-                        <th><b>PROPRIETÁRIO</b></th>
-                        <th><b>C.P.F</b></th>                        
+                <thead class="table">
+                    <tr class="table">                        
+                        <th style="text-align: center"><b>NOME </b></th>
+                        <th style="text-align: center"><b>IDADE </b></th>
+                        <th style="text-align: center"><b>GÊNERO</b></th>
+                        <th style="text-align: center"><b>RAÇA</b></th>
+                        <th style="text-align: center"><b>PROPRIETÁRIO</b></th>
+                        <th style="text-align: center"><b>C.P.F PROPRIETÁRIO</b></th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -35,8 +35,7 @@ LISTA DE PETS CADASTRADOS & DASHBOARD
                         </tr>
                     {% endfor %}
                 </tbody>
-            </table>
-            <hr>                    
+            </table>                             
     </div>
 </div>
 {% endblock content %}

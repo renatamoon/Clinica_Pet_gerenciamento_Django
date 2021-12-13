@@ -6,8 +6,7 @@ EXCLUSÃO DE CLIENTES
 
 {% block content %}
 
-<style>   
-	
+<style>   	
 	.center-column{        
         text-align: left;
 		width:600px;
@@ -25,30 +24,33 @@ EXCLUSÃO DE CLIENTES
 </style>
 
 <div class="center-column">
-<div class="box box-solid box-danger"> 
-    <div class="box-header with-border">
-        <div class="card-title" style="font-size:20px">
-            <b>TEM CERTEZA QUE DESEJA REMOVER O CLIENTE A SEGUIR?</b>
-        </div>        
-    </div>    
-    <br>
-    <div class="box-body" style="font-size:18px">
-        <p><b>NOME: </b>{{cliente.nome}}</p>
-        <p><b>PROFISSÃO: </b>{{cliente.profissao}}</p>
-        <p><b>DATA DE NASCIMENTO: </b>{{cliente.data_nascimento}}</p>
-        <p><b>E-MAIL:</b> {{cliente.email}}</p>
-        <p><b>CPF: </b>{{cliente.cpf}}</p>
-    </div>
-    <form method="POST">        
+    <div class="box box-solid box-danger"> 
+        <div class="box-header with-border">
+            <div class="card-title" style="font-size:20px">
+                <b>TEM CERTEZA QUE DESEJA REMOVER O CLIENTE A SEGUIR?</b>
+            </div>        
+        </div>    
         <br>
-        {% csrf_token %} 
-        <td>
-        <button class="btn btn-danger" type="submit"> EXCLUIR</button>  </td>        
-        <td>
-        <a href="{% url 'listar_clientes' %}" class="btn btn-info">VOLTAR</a></td> 
-        </div>            
-    </form>     
-</div>
+        <div class="box-body" style="font-size:18px">
+            <p><b>NOME: </b>{{cliente.nome}}</p>
+            <p><b>PROFISSÃO: </b>{{cliente.profissao}}</p>
+            <p><b>DATA DE NASCIMENTO: </b>{{cliente.data_nascimento}}</p>
+            <p><b>E-MAIL:</b> {{cliente.email}}</p>
+            <p><b>CPF: </b>{{cliente.cpf}}</p>
+        </div>
+        <form method="POST">        
+            <br>
+            {% csrf_token %} 
+            <td>
+            <button class="btn btn-danger" type="submit" style="margin-left: 10px"> EXCLUIR</button>  </td>        
+            <td>
+                <a href="{% url 'listar_clientes' %}" class="btn btn-info" style="margin-left: 10px">
+                    VOLTAR
+                </a>
+            </td>
+            <br><br>          
+        </form>     
+    </div>
 </div>
 
 {% endblock content %}
