@@ -23,13 +23,16 @@ DADOS DO CLIENTE
                   <b>CPF</b> <a class="pull-right">{{ cliente.cpf }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Endereço</b> <a class="pull-right">{{ cliente.endereco.rua|title }} | {{ cliente.endereco.cidade|title }} | {{cliente.endereco.estado}}</a>
+                  <b>Endereço</b> <a class="pull-right">{{ cliente.endereco.rua|title }}</a>
+                </li>
+                <li class="list-group-item">
+                  <b>Cidade/UF</b> <a class="pull-right"> {{ cliente.endereco.cidade|title }} | {{cliente.endereco.estado}}</a>
                 </li>
                 <li class="list-group-item">
                   <b>E-mail</b> <a class="pull-right">{{ cliente.email }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Cadastrado em</b> <a class="pull-right">{{cliente.created_on}}</a>
+                  <b>Inclusão</b> <a class="pull-right">{{cliente.created_on}}</a>
                 </li>                
               </ul>
             </div>

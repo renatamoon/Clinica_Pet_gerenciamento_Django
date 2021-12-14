@@ -1,8 +1,8 @@
-from ..models import Pet
+from ..models import pet_models
 
 
 def cadastrar_pet(pet):    
-    pet_bd = Pet.objects.create(nome=pet.nome, 
+    pet_bd = pet_models.Pet.objects.create(nome=pet.nome, 
                                 idade=pet.idade, 
                                 categoria=pet.categoria, 
                                 cor=pet.cor, 
@@ -14,12 +14,12 @@ def cadastrar_pet(pet):
 
 #------------buscar todos os pets de um determinado cliente
 def listar_pets(id):
-    pets = Pet.objects.filter(proprietario=id).all()
+    pets = pet_models.Pet.objects.filter(proprietario=id).all()
     return pets
 
 
 def listar_pets_all():
-    return Pet.objects.all()    
+    return pet_models.Pet.objects.all()    
 
 
 def editar_pet(pet, pet_novo):
@@ -35,5 +35,5 @@ def editar_pet(pet, pet_novo):
 
 
 def listar_pet_id(id):
-    pet = Pet.objects.get(id=id)
+    pet = pet_models.Pet.objects.get(id=id)
     return pet

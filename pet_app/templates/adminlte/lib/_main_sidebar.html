@@ -1,16 +1,14 @@
-<!-- -----------subscrevendo o bootstrap-->
+<!-- -----------subscrevendo o bootstrap (cor da barra lateral + header)-->
 <style>
-.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-    background-color: black;
-}
+    .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+        background-color: black;
+    }
 
-.nav-item5{
-    background-color: rgb(124, 5, 5);
-}
-
+    .nav-item5{
+        background-color: rgb(124, 5, 5);
+    }   
 </style>
 <!-- ----------- end subscrevendo o bootstrap-->
-
 
 {% extends 'adminlte/lib/_main_sidebar.html' %}
 
@@ -22,38 +20,37 @@
 Links de Navegação
 {% endblock nav_heading %}
 
+<!-- -----------links da barra lateral-->
+
 {% block nav_links %}
-<li class="nav-item">
-    <a href="{% url 'listar_clientes' %}" class="nav-link">
-        <i class="nav-icon fas fa-cog"></i> 
-        <p><b>LISTAR CLIENTES</b></p>
-    </a>
-</li>
-<li class="nav-item">
-    <a href="{% url 'listar_pets' %}" class="nav-link">
-        <i class="nav-icon fas fa-calendar"></i> 
-        <p><b>PETS</b></p>
-    </a>
-</li>
-<li class="nav-item">
-    <a href="{% url 'listar_funcionarios' %}" class="nav-link">
-        <i class="nav-icon fas fa-calendar"></i> 
-        <p><b>FUNCIONÁRIOS</b></p>
-    </a>
-</li>
+    <li class="nav-item">
+        <a href="{% url 'listar_clientes' %}" class="nav-link">
+            <i class="nav-icon fas fa-cog"></i> 
+            <p><b>LISTAR CLIENTES</b></p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{% url 'listar_pets' %}" class="nav-link">            
+            <p><b>PETS</b></p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{% url 'listar_funcionarios' %}" class="nav-link">             
+            <p><b> FUNCIONÁRIOS</b></p>
+        </a>
+    </li>
 
-<li class="nav-item">
-    <a href="{% url 'dashboard' %}" class="nav-link">
-        <i class="nav-icon fas fa-calendar"></i> 
-        <p><b>DASHBOARD</b></p>
-    </a>
-</li>
+    <li class="nav-item">
+        <a href="{% url 'dashboard' %}" class="nav-link">             
+            <p><i class="nav-icon fa fa-bar-chart"></i><b> DASHBOARD</b></p>
+        </a>
+    </li>
 
-<li class="nav-item5">
-    <a href="{% url 'logout' %}" class="nav-link">
-        <i class="nav-icon fas fa-calendar"></i> 
-        <p><b>LOGOUT</b></p>
-    </a>
-</li>
+    <li class="nav-item5">
+        <a href="{% url 'logout' %}" class="nav-link">            
+            <p><i class="fa fa-sign-out"></i><b> LOGOUT</b></p>
+        </a>
+    </li>
 
 {% endblock nav_links %}
+<!-- ----------- end links da barra lateral-->

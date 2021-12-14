@@ -1,6 +1,6 @@
 {% load static %}
+<!-- css links and routs-->
 <link href="{% static 'css/login.css' %}" rel="stylesheet" />
-<!--bootstrap and css links and routs-->
 
 <!--Titulo da página-->
 <title>Login</title>
@@ -8,14 +8,17 @@
 <!--HTML Code-->
 <div id="login-container"><br><br>
   <h1>LOGIN | <b>CLÍNICA PET</b></h1><br>
+
+  <!-- formulário de login -->
   <form action="{% url 'listar_pets' %}" method="POST">
     {% csrf_token %}
-    <label for="username">E-mail</label><br>
+    <label for="username">E-MAIL</label><br>
       <input type="euserna" name="username" id="username" placeholder="Digite seu usuário" autocomplete="off">
-    <label for="password">Senha</label><br>
+    <label for="password">SENHA</label><br>
       <input type="password" name="password" id="password" placeholder="Digite sua senha">      
     <input type="submit" value="Acessar">
   </form>
+  <!-- end formulário de login -->
     <div id="social-container">
       <p>Contate um de nossos operadores caso não consiga acessar</p>      
     </div>

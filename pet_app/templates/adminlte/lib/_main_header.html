@@ -1,7 +1,10 @@
+<!-- sobescrevendo o bootstrap-->
 <style>
-    .skin-blue .main-header .navbar {
+    
+.skin-blue .main-header .navbar {
     background-color: black;
 }
+
 .skin-blue .main-header .logo {
     background-color: #063855;;
     color: #fff;
@@ -22,14 +25,12 @@
 
 .content {
     min-height: 250px;
-    padding: 5px;
-    margin-right: 20px;
-    margin-left: 2px;
-    padding-left: 20px;
-    padding-right: 150px;
+    padding: 5px;        
+    padding-right: 20px;
 }
 
 </style>
+<!-- end sobescrevendo o bootstrap-->
 
 {% extends 'adminlte/lib/_main_header.html' %}
 
@@ -37,7 +38,7 @@
 
     <a href="{% block logo_href %}/{% endblock %}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">{% block logo_text_small %}<b>C</b>PET{% endblock %}</span>
+        <span class="logo-mini">{% block logo_text_small %}<b>C</b> PET{% endblock %}</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg">{% block logo_text %}<b>CLÍNICA </b>PET{% endblock %}</span>
     </a>

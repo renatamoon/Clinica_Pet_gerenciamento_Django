@@ -1,9 +1,16 @@
+<style>
+    .main-footer{
+        background-color: black;
+        color: white;       
+    }
+
+</style>
+
 {% extends 'adminlte/lib/_main_footer.html' %}
 
 {% block version %} 1.0 {% endblock version %}
 
 {% block legal %}
-
 
     <strong>Copyright &copy; {% now "Y" %}{% if not site %}.{% endif %}
         {% if site %}
@@ -11,6 +18,5 @@
         {% endif %}
     </strong> All rights
     reserved by <b>CLÍNICA PET</b> | Powered by <b>Django</b>
-
 
 {% endblock legal %}

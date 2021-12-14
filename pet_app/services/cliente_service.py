@@ -1,7 +1,7 @@
-from ..models import Cliente
+from ..models import cliente_models
 
 def cadastrar_cliente(cliente):    
-    Cliente.objects.create( nome=cliente.nome, 
+    cliente_models.Cliente.objects.create( nome=cliente.nome, 
                             email=cliente.email, 
                             endereco=cliente.endereco, 
                             cpf=cliente.cpf,
@@ -10,11 +10,11 @@ def cadastrar_cliente(cliente):
 
 
 def listar_clientes():
-    return Cliente.objects.all()   
+    return cliente_models.Cliente.objects.all()   
 
 
 def listar_cliente_id(id):
-    return Cliente.objects.get(id=id)
+    return cliente_models.Cliente.objects.get(id=id)
 
 
 def editar_cliente(cliente, cliente_novo):

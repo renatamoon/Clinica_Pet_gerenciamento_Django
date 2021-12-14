@@ -1,13 +1,13 @@
-from ..models import EnderecoCliente
+from ..models import cliente_models
 
 def cadastrar_endereco(endereco):
-    return EnderecoCliente.objects.create(  rua=endereco.rua,
-                                            cidade=endereco.cidade,
-                                            estado=endereco.estado)
+    return cliente_models.EnderecoCliente.objects.create(   rua=endereco.rua,
+                                                            cidade=endereco.cidade,
+                                                            estado=endereco.estado)
 
 
 def listar_endereco_id(id):
-    return EnderecoCliente.objects.get(id=id)
+    return cliente_models.EnderecoCliente.objects.get(id=id)
 
 
 def editar_endereco(endereco_antigo, endereco_novo):

@@ -23,7 +23,8 @@ Listagem de Pet
                         </li>
                         <li class="list-group-item">
                             <b>COR</b> <a class="pull-right">{{pet.get_cor_display}}</a>
-                        </li>L                        <li class="list-group-item">
+                        </li>
+                        <li class="list-group-item">
                             <b>GÊNERO</b> <a class="pull-right">{{pet.get_genero_display}}</a>
                         </li>
                         <li class="list-group-item">
@@ -33,23 +34,19 @@ Listagem de Pet
                             <b>PESO</b> <a class="pull-right">{{pet.peso}} kilo(s)</a>
                         </li>
                         <li class="list-group-item">
-                            <b>Cadastrado em</b> <a class="pull-right">{{pet.created_on}}</a>
+                            <b>INCLUSÃO</b> <a class="pull-right">{{pet.created_on}}</a>
                         </li>  
-                    </ul>    
-                {% if user.cargo == 1 %}                
+                    </ul>   
+                                          
                 <div class="row">
                         <div class="col-md-12">                            
                             <a href="{% url 'cadastrar_consulta' pet.id %}" class="btn btn-primary btn-block">
                                 Cadastrar Consulta
                             </a>
                         </div>
-                </div>
-                {% endif %}
-            </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-
+                </div>             
+            </div>                
+        </div> 
             <!-- About Me Box -->
         </div>
         <div class="col-md-9">
@@ -99,5 +96,3 @@ Listagem de Pet
 </section>
 
 {% endblock content %}
-
-
