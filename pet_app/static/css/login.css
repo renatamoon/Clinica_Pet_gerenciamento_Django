@@ -9,7 +9,9 @@
 
 body {
   background-color: black;
+  animation: transitionIn 0.75s;
 }
+
 
 textarea:focus, input:focus{
   outline: none;
@@ -99,4 +101,18 @@ input[type="submit"]:hover {
   line-height: 40px;
   margin: 0 5px;
   color: #FFF;
+}
+
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }    
 }

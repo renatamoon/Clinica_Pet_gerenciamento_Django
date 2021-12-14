@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 {% extends 'adminlte/base.html' %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,19 +11,19 @@
         {% endblock title %}
     </title>
 </head>
-<body>
-<main class="container">
-    {% block content %}
+    <body>
+    <main class="container">
+        {% block content %}
 
-    {% endblock content %}
+        {% endblock content %}
 
-</main>
+    </main>
 
-{% block javascript %}
-{{block.super}}
+        {% block javascript %}
+        {{block.super}}
 
-{% endblock javascript %}
+        {% endblock javascript %}
 
-</body>
+    </body>
 
 </html>
