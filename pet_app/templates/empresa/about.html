@@ -1,0 +1,53 @@
+{% load static %}
+
+<!--bootstrap and css links and routs-->
+<link href="{% static 'app/css/about_new.css' %}" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />    
+<link href="{% static 'app/css/bootstrap.css' %}" rel="stylesheet" />
+<!--end bootstrap and css links and routs-->
+<title>Sobre</title>
+<!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">
+                <b>ClinicaPet</b>
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportservicosedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'sobre' %}">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'servicos' %}">Serviços</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+<!--end nav bar-->
+<!--starting about section-->
+    <div class="about-section">
+        <div class="inner-container">
+            <h1>Sobre Nós</h1>
+            <p class="text">
+                A Clínica Pet conta com Pronto Socorro Veterinário 24h todos os dias, 
+                inclusive aos Domingos e Feriados. Nossa equipe de Médicos Veterinários e nossa completa infraestrutura
+                permitem o atendimento rápido em casos de urgência e emergência, com profissionais amplamente treinados
+                para este tipo de situação, formados nas melhores Universidades do país. Exames de imagem e laboratoriais 
+                são realizados no próprio laboratório clínico do hospital para confirmação dos diagnósticos.
+            </p>
+            <div class="skills">
+                <span>NOSSA UNIDADES</span>
+                <span>NOSSA EQUIPE</span>
+                <span>CONTATOS</span>
+            </div>
+        </div>        
+    </div>
+<!--end div about section-->
+<!--start footer section-->
+<footer class="py-5 bg-dark">
+    <div class="container px-5"><p class="m-0 text-center text-white"><b>{{nome_da_empresa}} | {% now "Y" as current_year %} {{current_year}}</b></p></div>
+    <div class="container px-5"><p class="m-0 text-center text-white">T: {{contato_empresa.telefone}}</p></div>
+    <div class="container px-5"><p class="m-0 text-center text-white">E: {{contato_empresa.email}}</p></div>
+    <div class="container px-5"><p class="m-0 text-center text-white">{{contato_empresa.endereco}}</p></div>            
+</footer>
+<!--end footer section-->

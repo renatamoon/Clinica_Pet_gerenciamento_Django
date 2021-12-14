@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Clinica Pet</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'app/css/bootstrap.css' %}" rel="stylesheet" />            
+</head>
+<!-- starting the body part-->
+    <body>
+    <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!"><b>ClinicaPet</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportservicosedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'sobre' %}">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-form">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'servicos' %}">Serviços</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- end Responsive navbar-->
+
+    <!--block header-->
+
+    {% block header %}
+
+    {% endblock header %}
+
+    <!-- block content -->
+
+    {% block content %}
+
+    {% endblock content %}
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-5"><p class="m-0 text-center text-white"><b>{{nome_da_empresa}} | {% now "Y" as current_year %} {{current_year}}</b></p></div>
+            <div class="container px-5"><p class="m-0 text-center text-white">T: {{contato_empresa.telefone}}</p></div>
+            <div class="container px-5"><p class="m-0 text-center text-white">E: {{contato_empresa.email}}</p></div>
+            <div class="container px-5"><p class="m-0 text-center text-white">{{contato_empresa.endereco}}</p></div>            
+        </footer>
+
+    <!-- ----------Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="{% static 'app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'app/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- ---------- End block Bootstrap core JS-->
+    </body>
+</html>

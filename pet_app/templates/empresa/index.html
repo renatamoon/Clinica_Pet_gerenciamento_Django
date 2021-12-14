@@ -1,0 +1,388 @@
+{% extends 'empresa/master.html' %}
+{% load static %}
+{% block header %}
+{% include 'empresa/includes/header.html' %}
+{% endblock header %}
+{% block content %}    
+        
+<!-- Card information about services, the pet space and vaccination of pets-->
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-6">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                    <h2 class="h4 fw-bolder"><b>Nossos Serviços</b></h2>
+                    <p>Nossos serviços de clínica vão desde de hemogramas, atendimento especializado com nosso melhores médicos veterinários,
+                       atendimento psicológico, fisioterapia integrada, espaço pet para o seu bichinho quando estiver nas nossas dependências.
+                    </p>
+                    <a class="text-decoration-none" href="#!">
+                        Saiba mais
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                        <h2 class="h4 fw-bolder"><b>Espaço Pet</b></h2>
+                        <p>O Espaço Pet, uma área exclusiva para cães e gatos, está ganhando cada vez mais destaque nos condomínios residenciais paulistanos. ... Essas áreas dedicadas aos animaizinhos contam com nomes variados, podendo ser chamadas.</p>
+                        <a class="text-decoration-none" href="#!">
+                        Saiba mais
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                <div class="col-lg-4">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h4 fw-bolder"><b>Vacinação</b></h2>
+                        <p>Proteger o seu pet contra doenças infecciosas. Vaciná-lo irá permitir que ele permaneça saudável! Proteger as pessoas contra os agentes circulantes dessas doenças. A vacinação previne o contágio de um animal para o outro, ou mesmo para as pessoas.</p>
+                        <a class="text-decoration-none" href="#!">
+                        Saiba mais
+                        <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</section>
+<!-- healthy insurance information-->
+<section class="bg-light py-5 border-bottom">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder"><b>Nossos planos para seu animal</b></h2>            
+            <p class="lead mb-0" style="font-size: 16px;">Cobertura apenas na região da Grande São Paulo</p>
+            <p class="lead mb-0" style="font-size: 14px;">Veja abaixo os planos especializados para seu animal</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+        <!-- Pricing card free-->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card mb-5 mb-xl-0">
+                    <div class="card-body p-5">
+                        <div class="small text-uppercase fw-bold text-muted">Plano Bronze</div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">R$ 89,99</span>
+                                <span class="text-muted">/ mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong>Diagnósticos</strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Acompanhamento veterinário
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Consultas 24h com USO ILIMITADO
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Exames Simples com USO ILIMITADO
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Exames Bioquímicos com USO ILIMITADO
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Castração (macho e fêmea)
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Exames Hormonais com USO ILIMITADO)
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Limpeza de Tártaro
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Cirurgias de Pequeno, Médio e Grande Porte com USO ILIMITADO
+                                </li>
+                                <li class="mb-2 text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Consultas Especializadas com USO ILIMITADO
+                                </li>
+                                <li class="mb-2 text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Vacinas Importadas
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Check-up preventivo anual
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    E muito mais ...
+                                </li>
+                            </ul>
+                                <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Contratar Plano</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing card pro-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <b>Plano Ouro</b>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="display-4 fw-bold">R$ 149,99</span>
+                                    <span class="text-muted">/ mês</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>O plano perfeito para uma proteção completa.
+                                        Sem surpresas, sem dores de cabeça!</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Internação
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Consultas 24h com USO ILIMITADO
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Medicamentos Utilizados em 
+                                        Consulta, Cirurgia e Internação
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Exames Simples, Bioquímicos, Exames de Imagem, 
+                                        Exames Dermatológicos, Exames Hormonais e com USO ILIMITADO
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Castração (macho e fêmea)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Limpeza de Tártaro
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Cirurgias de Pequeno, Médio e Grande Porte com USO ILIMITADO
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Consultas Especializadas com USO ILIMITADO
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Vacinas Importadas
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Check-up preventivo anual
+                                    </li>    
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-primary" href="#!">Contratar Plano</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Pricing card enterprise-->
+<div class="col-lg-6 col-xl-4">
+    <div class="card">
+        <div class="card-body p-5">
+            <div class="small text-uppercase fw-bold text-muted">Plano Prata</div>
+                <div class="mb-3">
+                    <span class="display-4 fw-bold">R$ 119,99</span>
+                    <span class="text-muted">/ mês</span>
+                </div>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            <strong>Plano ideal para todas as raças e para a 
+                            maioria das necessidades, incluindo
+                            check-up preventivo anual</strong>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Internação 24h
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Consultas 24h com USO ILIMITADO
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Medicamentos Utilizados em Consulta e Internação
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Exames Simples com USO ILIMITADO
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Exames Bioquímicos com USO ILIMITADO
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>                            
+                            Exames de Imagem com USO ILIMITADO
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Vacinas Importadas
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check text-primary"></i>
+                            Check-up preventivo anual
+                        </li>
+                        <li class="text-muted">
+                            <i class="bi bi-x"></i>
+                            Castração (macho e fêmea)
+                        </li>
+                         <li class="text-muted">
+                            <i class="bi bi-x"></i>
+                        Exames Hormonais com USO ILIMITADO)
+                        </li>
+                        <li class="text-muted">
+                            <i class="bi bi-x"></i>
+                            Limpeza de Tártaro
+                        </li>
+                        <li class="text-muted">
+                            <i class="bi bi-x"></i>
+                            Cirurgias de Pequeno, Médio e Grande Porte com USO ILIMITADO
+                        </li>
+                        <li class="mb-2 text-muted">
+                            <i class="bi bi-x"></i>
+                            Consultas Especializadas com USO ILIMITADO
+                        </li>
+                        <li class="mb-2 text-muted">
+                            <i class="bi bi-x"></i>
+                            Vacinas Importadas
+                        </li>
+                        <li class="text-muted">
+                            <i class="bi bi-x"></i>
+                            Check-up preventivo anual
+                        </li>
+                        <li class="text-muted">
+                            <i class="bi bi-x"></i>
+                            E muito mais ...
+                        </li>                        
+                    </ul>
+                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Contratar Plano</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Testimonials section-->
+<section class="py-5 border-bottom">
+    <div class="container px-5 my-5 px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder"><b>Veja as avaliações dos nossos clientes</b></h2>
+            <p class="lead mb-0 text-muted">Nossos clientes fiéis confirmam:</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+            <!-- Testimonial 1-->
+                <div class="card mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1" style="margin-right: 8px">  </i></div>
+                                <div class="ms-4">
+                                <p class="mb-1">Pet Shop muito bom. Atendimento excelente. Todos são muito gentis
+                                     e competentes. Os banhos são muito bem dados. O Doutor é excelente profissional e 
+                                     competente que nos deixa muito tranquilos no tratamento dos nossos pets..
+                                    Tenho confiança total neles. Parabéns.</p>
+                                    <div class="small text-muted">- Maria Helena de Souza, São Paulo, SP</div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Testimonial 2-->
+        <div class="card">
+            <div class="card-body p-4">
+                <div class="d-flex">
+                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1" 
+                            style="margin-right: 8px"></i></div>
+                        <div class="ms-4">                            
+                        <p class="mb-1">Excelente! Clínica com profissionais super sérios. Desde o pessoal da
+                             recepção (Deborah e Luiz), até os melhores médicos: Dra. Stephanie 
+                             Frey, Dra. Carol, Dra. Maju e Dr. Adauto, sempre tivemos um atendimento 
+                             maravilhoso. Realmente, está sempre "cheio" pela manhã, sinal de que as 
+                             pessoas confiam e levam os bichinhos lá. Mas eles foram sempre muito seguros 
+                             no atendimento do meu cachorro, fazendo todos os exames, me dando telefones 
+                             particulares e estando à disposição 24 horas.</p>
+                            <div class="small text-muted">- Alice Carla Votorantin, São Paulo, SP</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        
+<!-- Contact section-->
+<section class="bg-light py-5">
+    <div class="container px-5 my-5 px-5" id="contact-form">
+        <div class="text-center mb-5">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+            <h2 class="fw-bolder"><b>Entre em contato conosco</b></h2>
+            <p class="lead mb-0 text-muted">Preencha o formulário abaixo</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <!-- Form structure -->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Name input-->
+                        <div class="form-floating mb-3">                                
+                            <label for="name">Nome Completo</label>
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <label for="email">E-mail</label>
+                            <input class="form-control" id="email" type="email" placeholder="nome@exemplo.com" data-sb-validations="required,email" />
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <label for="phone">Número de telefone</label>
+                            <input class="form-control" id="phone" type="tel" placeholder="(11) 97656-7890" data-sb-validations="required" />                                
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <label for="message">Digite sua mensagem</label>
+                            <textarea class="form-control" id="message" type="text" placeholder="Digite aqui a sua mensagem..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>  
+                        
+                        <!-- ---------------Bootstrap core JS-->
+                         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                        <script src="js/scripts.js"></script>
+                        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+                        <script src="{}% static 'app/js/jquery.min.js' %}"></script>
+                        <script src="{% static 'app/js/bootstrap.bundle.min.js' %}"></script>
+                        
+                        <!-- ---------------Submiting the form and success messages -->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br/>
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                            <!-- Submit the form and error message-->                      
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
