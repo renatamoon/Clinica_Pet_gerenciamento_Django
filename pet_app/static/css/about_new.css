@@ -57,8 +57,20 @@ body{
     font-size: 13px;
 }
 
+
+#id-of-td {
+    position: relative;
+}
+
+#id-of-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
 @media screen and (max-width:1200px){
-    .inner-container{
+    .inner-container and .id-of-td {
         padding: 80px;
     }
 }
@@ -68,7 +80,7 @@ body{
         background-size: 100%;
         padding: 100px 40px;
     }
-    .inner-container{
+    .inner-container and .id-of-td {
         width: 100%;
     }
 }
@@ -77,7 +89,7 @@ body{
     .about-section{
         padding: 0;
     }
-    .inner-container{
+    .inner-container and .id-of-td {
         padding: 60px;
     }
 }

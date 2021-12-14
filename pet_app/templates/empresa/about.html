@@ -9,37 +9,39 @@
 <!--nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
-            <a class="navbar-brand" href="#!">
-                <b>ClinicaPet</b>
+            <a class="navbar-brand" aria-current="page" href="{% url 'home' %}">
+                <b>Max ClinicaPet</b>
             </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportservicosedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'sobre' %}">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'servicos' %}">Serviços</a></li>
                     </ul>
                 </div>
         </div>
     </nav>
 <!--end nav bar-->
+
 <!--starting about section-->
     <div class="about-section">
         <div class="inner-container">
             <h1>Sobre Nós</h1>
             <p class="text">
-                A Clínica Pet conta com Pronto Socorro Veterinário 24h todos os dias, 
+                Max Clínica Pet conta com Pronto Socorro Veterinário 24h todos os dias, 
                 inclusive aos Domingos e Feriados. Nossa equipe de Médicos Veterinários e nossa completa infraestrutura
                 permitem o atendimento rápido em casos de urgência e emergência, com profissionais amplamente treinados
                 para este tipo de situação, formados nas melhores Universidades do país. Exames de imagem e laboratoriais 
-                são realizados no próprio laboratório clínico do hospital para confirmação dos diagnósticos.
+                são realizados no próprio laboratório clínico do hospital para confirmação dos diagnósticos. <br>
+                Nossa clínica conta com uma infraestrutura completa de atendimento para urgências, com UTI e centro cirúrgico. 
+                Nosso hospital veterinário 24 horas dispõe de equipamentos modernos e infraestrutura para atender até 4 gatos
+                simultaneamente em nosso gatil, 4 pacientes na UTI, 9 internações e 6 hóspedes em nosso hotel para cachorro. 
+                Possuímos estrutura para realizar consultas veterinárias, um centro cirúrgico, e como mencionado anteriormente, 
+                até UTI animal.
             </p>
-            <div class="skills">
-                <span>NOSSA UNIDADES</span>
-                <span>NOSSA EQUIPE</span>
-                <span>CONTATOS</span>
-            </div>
+            
         </div>        
     </div>
 <!--end div about section-->

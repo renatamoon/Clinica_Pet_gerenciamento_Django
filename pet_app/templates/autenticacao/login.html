@@ -7,7 +7,8 @@
 
 <!--HTML Code-->
 <div id="login-container"><br><br>
-  <h1>LOGIN | <b>CLÍNICA PET</b></h1><br>
+  <h1>LOGIN <br>
+    <b>MAX CLÍNICA PET</b></h1><br>
 
   <!-- formulário de login -->
   <form action="{% url 'listar_pets' %}" method="POST">
@@ -21,6 +22,11 @@
   <!-- end formulário de login -->
     <div id="social-container">
       <p>Contate um de nossos operadores caso não consiga acessar</p>      
+    </div>
+    <div id="social-container">
+        <a class="navbar-brand" aria-current="page" href="{% url 'home' %}">
+          <b>Ir para o site</b>
+        </a>
     </div>
 </div>
 <!--end HTML Code-->
