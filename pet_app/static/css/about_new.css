@@ -11,19 +11,6 @@ header{
   background:lightcyan; 
 }
 
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    
-    to {
-        opacity: 1;
-        transform: translateY(0);
-
-    }
-}
-
 
 body{
     min-height: 100vh;
@@ -35,6 +22,20 @@ body{
     grid-template-rows: auto 1fr auto;
     background-color: #f1f1f1;
 }
+
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .about-section{
     background: url("../img/pic.png") no-repeat left;
