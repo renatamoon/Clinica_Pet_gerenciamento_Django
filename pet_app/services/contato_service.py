@@ -10,10 +10,11 @@ def cadastrar_contatos(contato):
     
 
 
-def listar_contatos_all():
-    return contato_models.Contato.objects.all()
+def listar_contatos():
+    contatos = contato_models.Contato.objects.all()
+    return contatos
 
 
 
-def listar_contato_id(id):
-    return contato_models.Contato.objects.get(id=id)
+
+

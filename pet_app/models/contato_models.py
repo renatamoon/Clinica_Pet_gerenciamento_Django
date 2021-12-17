@@ -12,10 +12,10 @@ class TimeStampedModel(models.Model):
 
 
 class Contato(TimeStampedModel): 
-    nome_completo            =       models.CharField    (   max_length=100, null=False, blank=False )
-    email                    =       models.EmailField   (   null=False, blank=False )
-    telefone                 =       models.CharField    (   max_length=16, null=False, blank=False  )   
-    mensagem                 =       models.TextField    (   max_length=300, null= False, blank=False )
+    nome_completo            =       models.CharField    (   max_length=100, null=False, blank=False, verbose_name='Nome' )
+    email                    =       models.EmailField   (   null=False, blank=False, verbose_name='Insira seu e-mail' )
+    telefone                 =       models.CharField    (   max_length=16, null=False, blank=False, verbose_name='Insira seu telefone'  )   
+    mensagem                 =       models.TextField    (   max_length=300, null= False, blank=False, verbose_name='Deixe sua mensagem ...' )
 
     
 #-------------------------------------------------------------------obs:
