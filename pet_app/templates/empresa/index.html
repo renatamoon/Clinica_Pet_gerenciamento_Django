@@ -6,14 +6,14 @@
 {% endblock header %}
 {% block content %}    
         
+
 <!-- Card information about services, the pet space and vaccination of pets-->
 <section class="py-5 border-bottom" id="features">
     <div class="container px-5 my-5">
         <div class="row gx-6">
 
-            <!-- start the Causa Animal box with info-->
-
-            <div class="col-lg-4 mb-5 mb-lg-0">
+            <!-- start the Causa Animal box with info--> 
+            <div class="col-lg-4 mb-5 mb-lg-0"> 
                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3" style="border-radius: 10px; max-height: 70px;">
                     <i class="bi bi-app-indicator" id="headingOne"></i>                    
                 </div>
@@ -40,8 +40,8 @@
                             </a>
                         </div>
                     </div>
-                </div>
-            
+                </div> 
+
                 <!-- end the first box with Nossos Serviços--> 
 
                 <!-- start the Causa Animal box with info-->
@@ -355,7 +355,7 @@
 </section>
 
 <!-- Testimonials section-->
-<section class="py-5 border-bottom">
+<section class="py-5 border-bottom">    
     <div class="container px-5 my-5 px-5">
         <div class="text-center mb-5">
             <h2 class="fw-bolder"><b>Veja as avaliações dos nossos clientes</b></h2>
@@ -369,15 +369,16 @@
                         <div class="d-flex">
                             <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1" style="margin-right: 8px">  </i></div>
                                 <div class="ms-4">
-                                <p class="mb-1">Clínica muito boa. Atendimento excelente. Todos são muito gentis
+                                <p class="mb-1">"Clínica muito boa. Atendimento excelente. Todos são muito gentis
                                     e competentes. Os banhos são muito bem dados. O Doutor é excelente profissional e 
                                     competente que nos deixa muito tranquilos no tratamento dos nossos pets..
-                                    Tenho confiança total neles. Parabéns.</p>
+                                    Tenho confiança total neles. Parabéns."</p>
                                     <div class="small text-muted">- Maria Helena de Souza, São Paulo, SP</div>
                                 </div>
                         </div>
                     </div>
                 </div>
+
 <!-- Testimonial 2-->
         <div class="card">
             <div class="card-body p-4">
@@ -385,84 +386,34 @@
                     <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1" 
                             style="margin-right: 8px"></i></div>
                         <div class="ms-4">                            
-                        <p class="mb-1">Excelente! Clínica com profissionais super sérios. Desde o pessoal da
+                        <p class="mb-1">"Excelente! Clínica com profissionais super sérios. Desde o pessoal da
                              recepção (Deborah e Luiz), até os melhores médicos: Dra. Stephanie 
                              Frey, Dra. Victoria, Dra. Maria e Dra. Fernanda, sempre tivemos um atendimento 
                              maravilhoso. Realmente, está sempre "cheio" pela manhã, sinal de que as 
                              pessoas confiam e levam os bichinhos lá. Mas eles foram sempre muito seguros 
                              no atendimento do meu cachorro, fazendo todos os exames, me dando telefones 
-                             particulares e estando à disposição 24 horas.</p>
+                             particulares e estando à disposição 24 horas."</p>
                             <div class="small text-muted">- Alice Carla Votorantin, São Paulo, SP</div>
                         </div>
                 </div>
             </div>
+        </div>        
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="{% static '/img/dog_index.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><b>Atendimento 5 estrelas</b></h5>
+            <p class="card-text">Temos um dos melhores atendimentos de São Paulo, assim como os nosso preços.
+                Entre em contato com a nossa central e veja nossos serviços, planos de saúde para seus pets e muito mais.
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Entrar em contato
+            </a>            
         </div>
     </div>
-</section>
-        
-<!-- Contact section-->
-<section class="bg-light py-5">
-    <div class="container px-5 my-5 px-5" id="contact-form">
-        <div class="text-center mb-5">
-            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-            <h2 class="fw-bolder"><b>Entre em contato conosco</b></h2>
-            <p class="lead mb-0 text-muted">Preencha o formulário abaixo</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Form structure -->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Name input-->
-                        <div class="form-floating mb-3">                                
-                            <label for="name">Nome Completo</label>
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <label for="email">E-mail</label>
-                            <input class="form-control" id="email" type="email" placeholder="nome@exemplo.com" data-sb-validations="required,email" />
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <label for="phone">Número de telefone</label>
-                            <input class="form-control" id="phone" type="tel" placeholder="(11) 97656-7890" data-sb-validations="required" />                                
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <label for="message">Digite sua mensagem</label>
-                            <textarea class="form-control" id="message" type="text" placeholder="Digite aqui a sua mensagem..." style="height: 10rem" data-sb-validations="required"></textarea>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                        </div>  
-                        
-                        <!-- ---------------Bootstrap core JS-->
-                         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-                        <script src="js/scripts.js"></script>
-                        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-                        <script src="{% static 'static/js/jquery.min.js' %}"></script>
-                        <script src="{% static 'static/js/bootstrap.bundle.min.js' %}"></script>
-                        
-                        <!-- ---------------Submiting the form and success messages -->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br/>
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                            <!-- Submit the form and error message-->                      
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                        <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+</section>        
+
 {% endblock %}
+

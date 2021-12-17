@@ -12,7 +12,7 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />            
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />           
 </head>
 <!-- starting the body part-->
     <body>
@@ -25,7 +25,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'sobre' %}">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact-form">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'cadastrar_contatos' %}">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'servicos' %}">Serviços</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><b>Acessar Sistema</b></a></li>
                     </ul>
@@ -45,6 +45,7 @@
     {% block content %}
 
     {% endblock content %}
+
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">

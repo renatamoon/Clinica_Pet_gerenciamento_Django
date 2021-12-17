@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+LISTA DE CONTATOS RECEBIDOS
+{% endblock title %}
+
+{% block content %}
+<div class="box box-solid box-primary">
+    <div class="box-header with-border" style="text-align: center;"><br>
+        <p class="box-title" style="font-size: 22px"><b>LISTA DE CONTATOS RECEBIDOS</b></p><br><br>
+    </div>
+    <div class="box-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="text-align: center">NOME COMPLETO</th>
+                    <th style="text-align: center">E-MAIL</th>
+                    <th style="text-align: center">TELEFONE</th>
+                    <th style="text-align: center">MENSAGEM</th>                     
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in contatos %}
+                <tr style="text-align: center">
+                    <td>{{i.nome_completo|title}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.telefone}}</td> 
+                    <td>{{i.mensagem}}</td>                 
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>        
+    </div>
+</div>
+{% endblock content %}

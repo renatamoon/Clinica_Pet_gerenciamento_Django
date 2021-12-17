@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import cliente_views, pet_views, consulta_views, funcionario_views, autenticacao_views, dashboard_views
+
+from pet_app.models import contato_models
+from .views import cliente_views, pet_views, consulta_views, funcionario_views, autenticacao_views, dashboard_views, contato_views
 from django.contrib import admin
 from django.urls import path
 from .views import site_views
@@ -31,5 +33,7 @@ urlpatterns = [
     #-----------------------urls do site
     path('home', site_views.index, name='home'),
     path('sobre', site_views.sobre, name='sobre'),
-    path('servicos', site_views.servicos, name='servicos'),     
+    path('servicos', site_views.servicos, name='servicos'),
+    path('listar_contatos', contato_views.listar_contatos, name='listar_contatos'),
+    path('cadastrar_contatos', contato_views.cadastrar_contato, name='cadastrar_contatos'),       
 ]

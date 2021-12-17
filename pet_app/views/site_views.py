@@ -19,7 +19,6 @@ def index(request):
         "3": {"titulo": "Vacinação", "descricao": "Proteger o seu pet contra doenças infecciosas. Vaciná-lo irá permitir que ele permaneça saudável! Proteger as pessoas contra os agentes circulantes dessas doenças. A vacinação previne o contágio de um animal para o outro, ou mesmo para as pessoas."},
 
     }
-
     return render(request, 'empresa/index.html', {'nome_da_empresa': nome_da_empresa, 'descricao_da_empresa': descricao_da_empresa, 'contato_empresa': contato_empresa, 'cursos_home':cursos_home})
 
 
