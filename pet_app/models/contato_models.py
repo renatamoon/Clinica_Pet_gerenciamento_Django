@@ -1,6 +1,5 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
-from django.core.validators import RegexValidator
 
 
 #models de Contato da Página Index - formulário para recepção de contatos
@@ -15,7 +14,7 @@ class TimeStampedModel(models.Model):
 class Contato(TimeStampedModel): 
     nome_completo            =       models.CharField    (   max_length=100, null=False, blank=False )
     email                    =       models.EmailField   (   null=False, blank=False )
-    telefone                 =       models.CharField    (   max_length = 16, null=False, blank=False  )   
+    telefone                 =       models.CharField    (   max_length=16, null=False, blank=False  )   
     mensagem                 =       models.TextField    (   max_length=300, null= False, blank=False )
 
     

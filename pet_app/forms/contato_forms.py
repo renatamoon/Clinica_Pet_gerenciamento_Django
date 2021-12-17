@@ -1,6 +1,7 @@
 from django import forms
 from ..models import contato_models
 
+
 class ContatoForm(forms.ModelForm):
     class Meta:
         model = contato_models.Contato

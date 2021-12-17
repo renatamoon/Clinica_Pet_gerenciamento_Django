@@ -26,6 +26,7 @@ Django==3.2.9
 django-adminlte2==0.4.3
 django-adminlte3==0.1.6
 django-crispy-forms==1.13.0
+django-phonenumber-field==6.0.0
 django-summernote==0.8.20.0
 duplicity==0.8.12.0
 entrypoints==0.3
@@ -64,6 +65,7 @@ packaging==21.0
 paramiko==2.6.0
 pbr==5.7.0
 pexpect==4.6.0
+phonenumberslite==8.12.39
 Pillow==8.4.0
 pipenv==11.9.0
 platformdirs==2.4.0
