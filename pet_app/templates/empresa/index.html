@@ -1,11 +1,12 @@
 {% extends 'empresa/master.html' %}
 {% load static %}
 {% static 'static/css/jquery.min.js' %}
+
 {% block header %}
 {% include 'empresa/includes/header.html' %}
 {% endblock header %}
-{% block content %}    
-        
+
+{% block content %}           
 
 <!-- Card information about services, the pet space and vaccination of pets-->
 <section class="py-5 border-bottom" id="features">
@@ -407,7 +408,8 @@
             <p class="card-text">Temos um dos melhores atendimentos de São Paulo, assim como os nosso preços.
                 Entre em contato com a nossa central e veja nossos serviços, planos de saúde para seus pets e muito mais.
             </p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="{% url 'cadastrar_contatos' %}" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="{% url 'cadastrar_contatos' %}" 
+            role="button" aria-expanded="false" aria-controls="collapseExample">
                 Entrar em contato
             </a>            
         </div>

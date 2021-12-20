@@ -2,16 +2,10 @@
 {% load static %}
 {% load meus_filtros %}
 {% static 'static/css/jquery.min.js' %}
-{% block header %}
-{% include 'empresa/includes/header.html' %}
-{% endblock header %}
 {% block content %}
 
-
-
 <!--bootstrap and css links and routs-->
-<link href="{% static 'css/contato.css' %}" rel="stylesheet" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <!-- Contact section-->
 <section class="bg-light py-5">
@@ -81,5 +75,6 @@
         </div>
     </div>
 </section>
+
  
 {% endblock content %}

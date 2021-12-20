@@ -7,9 +7,9 @@
   border: none;
 }
 
-body {
-  background-color: black;
-  animation: transitionIn 0.75s;
+body {  
+  background:black;
+  animation: transitionIn 0.75s;  
 }
 
 
