@@ -7,16 +7,17 @@ Cadastro de clientes
 
 
 {% block content %}
-<div class="box box-solid box-primary">
+<div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
     <div class="box-header with-border">
-        <div class="card-title"><h3>
+        <div class="card-title"><h2>
             {% if request.resolver_match.url_name == 'cadastrar_cliente' %} 
                 <b>CADASTRO DE CLIENTES</b>
             {% else %}
                 <b>EDIÇÃO DE CADASTRO DE CLIENTES</b>
-            {% endif %}</b></h3>
+            {% endif %}</b></h2>
         </div>
     </div>
+    <hr>
     <div class="box-body">
     <form method="POST">
         {% csrf_token %}       
