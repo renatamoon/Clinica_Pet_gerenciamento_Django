@@ -7,8 +7,7 @@
   border: none;
 }
 
-body {  
-  background:black;
+body {    
   animation: transitionIn 0.75s;  
 }
 
@@ -34,7 +33,7 @@ a:hover {
   padding: 20px 30px;
   margin-top: 10vh;
   border:5px solid;
-  border-image:linear-gradient(45deg,red,rgb(32, 153, 233),purple, pink) 10;
+  border-image:linear-gradient(45deg,red,rgb(185, 8, 165),rgb(166, 209, 7), rgb(241, 88, 6)) 10;
   text-align: center;
 }
 

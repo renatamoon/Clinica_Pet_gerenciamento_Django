@@ -1,10 +1,6 @@
 <!-- -----------subscrevendo o bootstrap (cor da barra lateral + header)-->
 <style>
-    .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-        background-color: black;
-    }
-
-    .nav-item5{
+        .nav-item5{
         background-color: rgb(124, 5, 5);
     }   
 </style>
@@ -24,8 +20,7 @@ Links de Navegação
 
 {% block nav_links %}
     <li class="nav-item">
-        <a href="{% url 'listar_clientes' %}" class="nav-link">
-            <i class="nav-icon fas fa-cog"></i> 
+        <a href="{% url 'listar_clientes' %}" class="nav-link">            
             <p><b>LISTAR CLIENTES</b></p>
         </a>
     </li>
