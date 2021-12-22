@@ -5,16 +5,18 @@ LISTA DE CONSULTAS
 {% endblock title %}
 
 {% block content %}
-<section class="invoice">
-    <div class="row">
-        <div class="col-xs-12">
-            <h2 class="page-header">
+<section class="invoice">  
+    <div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
+    <div class="box-header with-border">
+        <div class="row">        
+            <h2 class="page-header"> <br>
                 <i class="fa fa-drivers-license"></i> <b>RESUMO DA CONSULTA</b><br>
                 <br>
                 <small class="pull-left"><b>Realizado em:</b> {{consulta.data}}</small><br>
-            </h2>
-        </div>
-    </div>
+            </h2>      
+        </div> 
+    </div>    
+    <br>
     <div class="row invoice-info">        
         <div class="col-sm-4 invoice-col">
             <i class="fa fa-bars"></i><b>  DADOS DO PET</b>

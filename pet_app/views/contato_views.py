@@ -35,7 +35,3 @@ def cadastrar_contato(request):
         form_contato = ContatoForm()
     return render(request, 'empresa/contato.html', {'form_contato': form_contato})
 
-
-# def listar_cliente_id(request, id):
-#     contato         =       contato_service.listar_contato_id(id)  
-#     return render(request, 'contato/lista_contato_id.html', {'contato': contato})
