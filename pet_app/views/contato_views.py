@@ -13,6 +13,12 @@ def listar_contatos(request):
 
 
 
+def listar_contato_id(request, id):
+    contato         =       contato_service.listar_contato_id(id)
+    return render(request, 'contatos/lista_contato_id.html', {'contato': contato})
+
+
+
 def cadastrar_contato(request):
     if request.method       ==      "POST":
         form_contato = ContatoForm(request.POST)

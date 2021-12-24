@@ -15,6 +15,8 @@ def listar_contatos():
     return contatos
 
 
-
+def listar_contato_id(id):
+    contato = contato_models.Contato.objects.get(id=id)
+    return contato
 
 

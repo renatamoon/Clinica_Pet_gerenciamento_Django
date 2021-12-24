@@ -1,1 +1,38 @@
-Não há nada
+{% extends "base.html" %}
+{% load meus_filtros %}
+{% block title %}
+LISTA DE CONTATOS
+{% endblock title %}
+
+{% block content %}
+<section class="invoice" style="border-radius: 30px;">  
+    <div class="box box-primary" style="border-radius: 15px;">
+    <div class="box-header">     
+            <h2 class="page-header"> <br>
+                <i class="fa fa-drivers-license"></i> <b>INFORMAÇÕES SOBRE O CONTATO</b><br>
+            </h2>
+    </div>    
+    <br>
+    <div class="row invoice-info">        
+        <div class="col-sm-4 invoice-col">
+            <i class="fa fa-bars"></i><b>  DADOS DO PET</b>
+            <HR>            
+            <b>Nome Completo: </b> {{contato.nome_completo|title}} <br>
+            <b>Telefone: </b> {{contato.telefone}} <br>
+            <b>Email: </b> {{contato.email}} ano(s)<br>
+            <b>Email: </b> {{contato.created_on}}<br>            
+            <b>Mensagem: </b> {{contato.mensagem}}<br>                
+        </div>
+    </div>   
+    <hr>
+    <br>
+    <div class="row no-print">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-primary pull-left" onclick="window.print();">
+                <i class="fa fa-print"> Imprimir</i>
+            </button>
+        </div>
+    </div>    
+</section>
+
+{% endblock content %}

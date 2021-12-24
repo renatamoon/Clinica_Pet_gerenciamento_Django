@@ -35,5 +35,6 @@ urlpatterns = [
     path('sobre', site_views.sobre, name='sobre'),
     path('servicos', site_views.servicos, name='servicos'),
     path('listar_contatos', contato_views.listar_contatos, name='listar_contatos'),
-    path('cadastrar_contatos', contato_views.cadastrar_contato, name='cadastrar_contatos'),       
+    path('cadastrar_contatos', contato_views.cadastrar_contato, name='cadastrar_contatos'),
+    path('lista_contato_id/<int:id>', contato_views.listar_contato_id, name='lista_contato_id'),       
 ]

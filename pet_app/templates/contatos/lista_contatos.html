@@ -16,16 +16,15 @@ LISTA DE CONTATOS RECEBIDOS
                     <th style="text-align: center">NOME COMPLETO</th>
                     <th style="text-align: center">E-MAIL</th>
                     <th style="text-align: center">TELEFONE</th>
-                    <th style="text-align: center">MENSAGEM</th>                     
+                                         
                 </tr>
             </thead>
             <tbody>
             {% for i in contatos %}
                 <tr style="text-align: center">
-                    <td>{{i.nome_completo|title}}</td>
+                    <td><a href="{% url 'lista_contato_id' i.id %}">{{i.nome_completo|title}}</a></td>
                     <td>{{i.email}}</td>
-                    <td>{{i.telefone}}</td> 
-                    <td>{{i.mensagem}}</td>                 
+                    <td>{{i.telefone}}</td>                                    
                 </tr>
             {% endfor %}
             </tbody>
