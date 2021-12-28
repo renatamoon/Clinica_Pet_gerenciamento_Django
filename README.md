@@ -33,17 +33,20 @@ Algumas funcionalidades:
 Front-End:
 
 ![HTML 5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![MaterialUi](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![JavaScript](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
 
 Desenvolvimento da parte de Administração:
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
-![Bower version](https://img.shields.io/bower/v/adminlte.svg)
 
 Banco de Dados:
 
+![Sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 Desenvolvido no:
@@ -96,7 +99,7 @@ DATABASES = {
   
 -Tela de Login da Clínica - acessível através do WebSite:<br><br>
 ![image](https://user-images.githubusercontent.com/87100340/147599710-af375aef-c7c0-4dd7-8fb2-af777482f28c.png)
-<br>  
+<br>
 -Tela de clientes cadastrados na clínica:<br><br>
 ![image](https://user-images.githubusercontent.com/87100340/145456158-80ad12f2-8049-45d5-a409-d899cfb1f9c1.png)
 <br><br>
@@ -126,21 +129,21 @@ DATABASES = {
 -Lista de Contatos recebidos (referente à página de formulário de contatos da Clínica - Website):
 <br><br>
 ![image](https://user-images.githubusercontent.com/87100340/147599401-9cd6e564-243e-4d75-b2f6-47d92346b159.png)
-<br><br>  
+<br><br>
 -Extrato do contato recebido com as informações:
 <br><br>
 ![image](https://user-images.githubusercontent.com/87100340/147599488-8c174e0e-7300-4aee-b0b6-63e657661b60.png)
 <br>
   
-### Imagens do Sistema do WebSite da Clínica: <br>
+### Imagens do Sistema do WebSite da Clínica:<br>
 
 -Front Page - Navbar + Header da página<br><br>
 ![image](https://user-images.githubusercontent.com/87100340/147599881-19ca8efd-f139-4017-bc8b-a1653488876f.png)
 <br><br>
 -Cards de Planos de Saúde para Pets<br><br>  
 ![image](https://user-images.githubusercontent.com/87100340/147599925-1137a78f-8e08-4345-8dba-4b98998868a9.png)
-  <br><br>
--Cards de avaliação de clientes + Footer: <br><br>  
+<br><br>
+-Cards de avaliação de clientes + Footer:<br><br>  
 ![image](https://user-images.githubusercontent.com/87100340/147599999-771cff5a-96fc-4dde-aa11-98108a93a1d6.png)
 <br><br>
 -Página Sobre a empresa:<br><br>
