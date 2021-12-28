@@ -9,7 +9,7 @@ DADOS DO CLIENTE
 <section class="content">
       <div class="row">
         <div class="col-md-3">
-          <!-- Profile Image -->
+          <!-- Área de Dados do Cliente-->
           <div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
             <div class="box-body box-profile">
               <br>
@@ -32,14 +32,12 @@ DADOS DO CLIENTE
                   <b>E-mail</b> <a class="pull-right">{{ cliente.email }}</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Inclusão</b> <a class="pull-right">{{cliente.created_on}}</a>
+                  <b>Inclusão</b> <a class="pull-right" style="font-size: 10px;">{{cliente.created_on}}</a>
                 </li>                
               </ul>
             </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
-          <!-- About Me Box -->
+          <!-- Área de Pets Cadastrados-->
           <div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
             <div class="box-header with-border text-center">
               <h3 class="box-title"><b>Pets Cadastrados</b></h3>
@@ -64,11 +62,9 @@ DADOS DO CLIENTE
                 </div>
               </div>
             </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
         </div>
-        <!-- /.col -->
+        <!-- Dados da Consulta -->
         <div class="col-md-9">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
@@ -103,7 +99,6 @@ DADOS DO CLIENTE
                                 </div>
                             </li>
                             {% endfor %}
-                            <!-- END timeline item -->
                             <li>
                                 <i class="fa fa-clock-o bg-gray"></i>
                             </li>
@@ -112,8 +107,6 @@ DADOS DO CLIENTE
                 </div>
             </div>
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
 </section>
 {% endblock content %}

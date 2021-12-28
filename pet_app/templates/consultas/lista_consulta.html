@@ -5,21 +5,18 @@ LISTA DE CONSULTAS
 {% endblock title %}
 
 {% block content %}
-<section class="invoice">  
-    <div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
-    <div class="box-header with-border">
-        <div class="row">        
-            <h2 class="page-header"> <br>
-                <i class="fa fa-drivers-license"></i> <b>RESUMO DA CONSULTA</b><br>
-                <br>
-                <small class="pull-left"><b>Realizado em:</b> {{consulta.data}}</small><br>
-            </h2>      
-        </div> 
-    </div>    
-    <br>
-    <div class="row invoice-info">        
+
+<div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
+    <div class="box-header" style="margin-left: 20px;">
+        <h2 class="page-header">
+            <i class="fa fa-drivers-license"></i> <b>RESUMO DA CONSULTA</b><br>
+            <br>
+            <small class="pull-left"><b>Realizado em:</b> {{consulta.data}}</small><br>
+            </h2>
+    </div> 
+    <div class="row invoice-info" style="margin-left: 20px;">        
         <div class="col-sm-4 invoice-col">
-            <i class="fa fa-bars"></i><b>  DADOS DO PET</b>
+            <i class="fa fa-paw"></i><b>  DADOS DO PET</b>
             <HR>            
             <b>Nome: </b> {{consulta.pet.nome|title}} <br>
             <b>Categoria: </b> {{consulta.pet.get_categoria_display}} <br>
@@ -32,7 +29,7 @@ LISTA DE CONSULTAS
         </div>
     </div>
     <hr>
-    <div class="row">
+    <div class="row" style="margin-left: 20px;">
         <div class="col-sm-12">
             <i class="fa fa-bars"></i><b> DADOS DA CONSULTA</b>
             <hr>
@@ -47,15 +44,13 @@ LISTA DE CONSULTAS
         </div>
     </div>
     <hr>
-    <br>
-    <div class="row no-print">
+    <div class="row no-print" style="margin-left: 20px;">
         <div class="col-xs-12">
             <button type="button" class="btn btn-primary pull-left" onclick="window.print();">
                 <i class="fa fa-print"> Imprimir</i>
             </button>
         </div>
-    </div>    
-</section>
-
+    </div><br><br>    
+</div> 
 
 {% endblock content %}

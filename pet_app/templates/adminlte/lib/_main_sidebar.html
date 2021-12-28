@@ -1,12 +1,11 @@
 <!-- -----------subscrevendo o bootstrap (cor da barra lateral + header)-->
 <style>
     .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-        background-color: #f7fafd;       
+        background-color: black;       
     }
     
     html body.skin-blue.sidebar-mini div.wrapper aside.main-sidebar section.sidebar ul.sidebar-menu li.header{
-        background-color: rgb(160, 159, 159);
-        border-radius: 5px;
+        background-color: rgb(160, 159, 159);        
         color: white;
     }
     
@@ -31,35 +30,35 @@ Acessos Rápidos
 
 {% block nav_links %}
     <li class="nav-item">
-        <a href="{% url 'listar_clientes' %}" class="nav-link">            
-            <p style="color: rgb(67, 63, 63);"><b>LISTAR CLIENTES</b></p>
+        <a href="{% url 'listar_clientes' %}" class="nav-link"><br>            
+            <p style="color: #fff;"><b>LISTAR CLIENTES</b></p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="{% url 'listar_pets' %}" class="nav-link">            
-            <p style="color: rgb(67, 63, 63);"><b>PETS</b></p>
+        <a href="{% url 'listar_pets' %}" class="nav-link"><br>             
+            <p style="color: #fff;"><b>PETS</b></p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="{% url 'listar_funcionarios' %}" class="nav-link">             
-            <p style="color: rgb(67, 63, 63);"><b> FUNCIONÁRIOS</b></p>
-        </a>
-    </li>
-
-    <li class="nav-item">
-        <a href="{% url 'listar_contatos' %}" class="nav-link">             
-            <p style="color: rgb(67, 63, 63);"><b> LISTA DE CONTATOS</b></p>
+        <a href="{% url 'listar_funcionarios' %}" class="nav-link"> <br>             
+            <p style="color: #fff;"><b> FUNCIONÁRIOS</b></p>
         </a>
     </li>
 
     <li class="nav-item">
-        <a href="{% url 'dashboard' %}" class="nav-link">             
-            <p style="color: rgb(67, 63, 63);"><i class="nav-icon fa fa-bar-chart"></i><b> DASHBOARD</b></p>
+        <a href="{% url 'listar_contatos' %}" class="nav-link">  <br>            
+            <p style="color: #fff;"><b> LISTA DE CONTATOS</b></p>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="{% url 'dashboard' %}" class="nav-link">   <br>          
+            <p style="color: #fff;"><i class="nav-icon fa fa-bar-chart"></i><b> DASHBOARD</b></p>
         </a>
     </li>
 
     <li class="nav-item5">
-        <a href="{% url 'logout' %}" class="nav-link">            
+        <a href="{% url 'logout' %}" class="nav-link">  <br>          
             <p style="color: rgb(240, 12, 12);"><i class="fa fa-sign-out"></i><b> SAIR</b></p>
         </a>
     </li>

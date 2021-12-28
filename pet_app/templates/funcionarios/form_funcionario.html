@@ -9,7 +9,7 @@ CADASTRO DE FUNCIONÁRIOS
     <div class="box-header with-border"> <br>       
         <p style="font-size: 25px;"><b> FORMULÁRIO DE CADASTRO DE FUNCIONÁRIOS</b></p>        
     </div>
-    <hr>
+    
     <div class="box-body">
         <form method="post">
             {% csrf_token %}
@@ -30,10 +30,8 @@ CADASTRO DE FUNCIONÁRIOS
                 {{ form_funcionario.cargo.errors }}
                 <label>CARGO: </label>
                 {{ form_funcionario.cargo|addclass:'form-control' }}
-            </div>
-
-            <hr>
-
+            </div>            
+            <hr>            
             <h4><b>DADOS DE USUÁRIO E SENHA</b></h4><br>
 
             <div class="form-group">

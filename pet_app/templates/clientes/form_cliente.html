@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 {% load meus_filtros %}
 {% block title %}
@@ -16,8 +15,7 @@ Cadastro de clientes
                 <b>EDIÇÃO DE CADASTRO DE CLIENTES</b>
             {% endif %}</b></h2>
         </div>
-    </div>
-    <hr>
+    </div>    
     <div class="box-body">
     <form method="POST">
         {% csrf_token %}       

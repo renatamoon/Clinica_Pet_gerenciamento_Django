@@ -5,15 +5,15 @@ LISTA DE CONTATOS
 {% endblock title %}
 
 {% block content %}
-<section class="invoice" style="border-radius: 30px;">  
-    <div class="box box-primary" style="border-radius: 15px;">
-    <div class="box-header">     
+ 
+    <div class="box box-primary" style="border-radius: 15px; margin-left: 20px;">
+    <div class="box-header" style="margin-left: 20px;">     
             <h2 class="page-header"> <br>
                 <i class="fa fa-drivers-license"></i> <b>INFORMAÇÕES SOBRE O CONTATO</b><br>
             </h2>
     </div>    
     <br>
-    <div class="row invoice-info">        
+    <div class="row invoice-info" style="margin-left: 20px;">        
         <div class="col-sm-4 invoice-col">
             <i class="fa fa-bars"></i><b>  DADOS DO PET</b>
             <HR>            
@@ -25,14 +25,13 @@ LISTA DE CONTATOS
         </div>
     </div>   
     <hr>
-    <br>
-    <div class="row no-print">
+    <div class="row no-print" style="margin-left: 20px;>
         <div class="col-xs-12">
             <button type="button" class="btn btn-primary pull-left" onclick="window.print();">
                 <i class="fa fa-print"> Imprimir</i>
             </button>
-        </div>
+        </div><br><br> 
     </div>    
-</section>
+
 
 {% endblock content %}
